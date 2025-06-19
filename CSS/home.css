@@ -1,8 +1,8 @@
 .container-fluid {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../IMG/h9.jpg);
+    background-image: url(../IMG/user_model/h9.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -34,15 +34,42 @@ nav {
     transition: top 0.3s ease-in-out;
     z-index: 999;
 }
-.nav-item {
+nav ul li a {
     position: relative;
 }
 
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: currentColor;
+    /* gạch chân cùng màu với chữ */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; 
+    /* khi hover thì gạch chân sẽ hiện ra */
+}
+nav ul li a{
+    font-size: 18px;
+}
+.nav-icons a:hover {
+    color: rgb(243, 150, 165) !important;
+}
+#logo-a::after {
+    content: none;
+}
+.nav-icons
+.nav-item {
+    position: relative;
+}
 .nav-link {
     text-decoration: none;
     color: #ff4081 !important;
-    font-weight: 500;
-    font-size: 16px;
     transition: color 0.3s ease;
     padding: 5px 10px;
 }
@@ -67,7 +94,85 @@ nav {
 .nav-link:hover::after {
     transform: scaleX(1);
 }
+.search{
+    position: relative;
+}
+@keyframes bounce {
 
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+#cart svg {
+    transition: transform 0.3s ease;
+}
+
+#cart:hover svg {
+    animation: bounce 0.4s ease;
+    animation-fill-mode: both;
+}
+/* Số lượng giỏ hàng */
+#cart {
+    position: relative;
+    color: white;
+}
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+/* Tắt đường line dưới */
+.search::after {
+    content: none;
+}
+#search-input::placeholder {
+    color: rgb(246, 246, 246);
+}
+/* Tìm kiếm */
+#search-input {
+    position: relative;
+    padding-left: 45px;
+    border-radius: 20px;
+    width: 400px;
+    height: 40px;
+    outline: none;
+    border: none;
+
+    /* Làm trong suốt + hiệu ứng mờ nền */
+    background-color: rgba(255, 255, 255, 0.196);
+    /* nền trắng mờ */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    /* Viền dưới mờ nhẹ */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* Màu chữ nếu cần rõ hơn */
+    color: white;
+}
+#search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    cursor: pointer;
+    color: rgb(246, 246, 246);
+}
 ul {
     list-style: none;
     display: flex;
@@ -122,9 +227,93 @@ a {
     border-radius: 10px;
     object-fit: cover;
 }
+.card {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.card-img-top {
+    transition: transform 0.6s ease;
+    will-change: transform;
+    /* Tăng hiệu suất mượt */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Tùy chọn: thêm hiệu ứng nâng card */
+.card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.best-seller-section {
+    position: relative;
+}
+.slider-container {
+    position: relative;
+    margin: 40px 0;
+}
+.slider-container {
+    position: relative;
+    margin: 40px 0;
+}
+.slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+.slider-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    color: #f687ac;
+    cursor: pointer;
+    border: #f687ac solid 2px;
+}
+.arrow-btn.left {
+    left: -50px;
+}
+
+.arrow-btn.right {
+    right: -50px;
+}
 .bosuutapmoinhat-nav{
     display: flex;
     justify-content: space-between;
+}
+.btn-card{
+    background-color: rgb(246, 67, 126);
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.btn-card:hover {
+    background-color: #f687ac;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+.collection {
+    display: none;
+}
+
+.collection.active {
+    display: block;
 }
 footer {
     color: rgb(26, 22, 22);

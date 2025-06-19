@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eyewear HIHA</title>
-    <link rel="icon" href="../IMG/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../LIB/bootstrap.min.css">
+    <link rel="stylesheet" href="../LIB/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="../CSS/home.css">
+    
 </head>
 
 <body>
@@ -17,216 +20,345 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="#" id="logo-a">
                                 <div class="logos">
-                                    <img src="../IMG/logo.png" alt="Logo" id="logo">
+                                    <img src="../IMG/logo/logo.png" alt="Logo" id="logo">
                                 </div>
                             </a>
                         </li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Sản phẩm</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li>
+                            <a href="#" class="search">
+                                <input type="text" placeholder="Tìm kiếm sản phẩm..." id="search-input" >
+                                <i data-lucide="search" id="search-icon"></i>
+                            </a>
+                        </li>
                     </ul>
-                    <a href="#" id="cart"><i data-lucide="shopping-cart"></i></a>
+                    <div class="nav-icons">
+                        <a href="#" id="cart">
+                            <i data-lucide="shopping-cart"></i>
+                            <span class="cart-badge" id="cart-count">0</span>
+                        </a>
+                        <a href="#" id="login"><i data-lucide="user"></i></a>
+                    </div>
                 </nav>
             </div>
         </header>
         <div class="container px-5">
-            <h1>Bán chạy nhất</h1>
-            <div class="row">
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../IMG/CacLoaiKinh/l9.jpg" class="card-img-top" alt="Eyewear Image 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Stylish Eyewear</h5>
-                            <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and function. Perfect for any occasion.</p>
-                            <a href="#" class="btn btn-primary">Shop Now</a>
+            <div class="slider-container position-relative">
+                <h1>Bán chạy nhất</h1>
+                <!-- Nút mũi tên trái -->
+                <button id="prevBtn" class="arrow-btn left">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <!-- Nút mũi tên phải -->
+                <button id="nextBtn" class="arrow-btn right">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+                <div class="slider-wrapper overflow-hidden">
+                    <div class="row flex-nowrap slider-track" id="productSlider">
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">880.000đ</a>
+                                </div>
+                            </div>
                         </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Stylish Eyewear</h5>
-                            <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and function.
-                                Perfect for any occasion.</p>
-                            <a href="#" class="btn btn-primary">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../IMG/CacLoaiKinh/l11.jpg" class="card-img-top" alt="Eyewear Image 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Stylish Eyewear</h5>
-                            <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and function.
-                                Perfect for any occasion.</p>
-                            <a href="#" class="btn btn-primary">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../IMG/CacLoaiKinh/l12.jpg" class="card-img-top" alt="Eyewear Image 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Stylish Eyewear</h5>
-                            <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and function.
-                                Perfect for any occasion.</p>
-                            <a href="#" class="btn btn-primary">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <div class="row pt-5">
                 <div class="col-6">
-                    <img src="../IMG/a3.jpg" alt="" width="600px" height="300px" class="img-card">
+                    <img src="../IMG/user_model/a3.jpg" alt="" width="600px" height="300px" class="img-card">
                 </div>
                 <div class="col-6">
-                    <img src="../IMG/a4.jpg" alt="" width="600px" height="300px" class="img-card">
+                    <img src="../IMG/user_model/a4.jpg" alt="" width="600px" height="300px" class="img-card">
                 </div>
             </div>
             <div class="bosuutapmoinhat">
                 <div class="bosuutapmoinhat-nav">
                     <h1>Bộ sưu tập mới nhất</h1>
                     <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Mẫu 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Mẫu 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Mẫu 3</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Mẫu 4</a></li>
+                        <li class="nav-item"><a class="nav-link" data-target="mau1" href="#">Mẫu 1</a></li>
+                        <li class="nav-item"><a class="nav-link" data-target="mau2" href="#">Mẫu 2</a></li>
+                        <li class="nav-item"><a class="nav-link" data-target="mau3" href="#">Mẫu 3</a></li>
+                        <li class="nav-item"><a class="nav-link" data-target="mau4" href="#">Mẫu 4</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Xem tất cả</a></li>
                     </ul> 
                 </div>
-                <div class="row pt-5">
-                    <div class="col-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMG/CacLoaiKinh/l9.jpg" class="card-img-top" alt="Eyewear Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Eyewear</h5>
-                                <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and
-                                    function.
-                                    Perfect for any occasion.</p>
-                                <a href="#" class="btn btn-primary">Shop Now</a>
+                <div class="bosuutapmoinhat-content">
+                    <!-- Mẫu 1 -->
+                    <div id="mau1" class="collection active">
+                        <div class="row pt-5">
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gọng kính kim loại</h5>
+                                        <a href="#" class="btn btn-card">450.000đ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gọng kính kim loại</h5>
+                                        <a href="#" class="btn btn-card">450.000đ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gọng kính kim loại</h5>
+                                        <a href="#" class="btn btn-card">450.000đ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gọng kính kim loại</h5>
+                                        <a href="#" class="btn btn-card">450.000đ</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Eyewear</h5>
-                                <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and
-                                    function.
-                                    Perfect for any occasion.</p>
-                                <a href="#" class="btn btn-primary">Shop Now</a>
+                        <div class="row pt-5">
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gọng kính kim loại</h5>
+                                        <a href="#" class="btn btn-card">450.000đ</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMG/CacLoaiKinh/l11.jpg" class="card-img-top" alt="Eyewear Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Eyewear</h5>
-                                <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and
-                                    function.
-                                    Perfect for any occasion.</p>
-                                <a href="#" class="btn btn-primary">Shop Now</a>
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gọng kính kim loại</h5>
+                                        <a href="#" class="btn btn-card">450.000đ</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMG/CacLoaiKinh/l12.jpg" class="card-img-top" alt="Eyewear Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Eyewear</h5>
-                                <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and
-                                    function.
-                                    Perfect for any occasion.</p>
-                                <a href="#" class="btn btn-primary">Shop Now</a>
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gọng kính kim loại</h5>
+                                        <a href="#" class="btn btn-card">450.000đ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gọng kính kim loại</h5>
+                                        <a href="#" class="btn btn-card">450.000đ</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row pt-5">
-                    <div class="col-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMG/CacLoaiKinh/l13.jpg" class="card-img-top" alt="Eyewear Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Eyewear</h5>
-                                <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and
-                                    function.
-                                    Perfect for any occasion.</p>
-                                <a href="#" class="btn btn-primary">Shop Now</a>
+                <div id="mau2" class="collection">
+                    <div class="row pt-5">
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMG/CacLoaiKinh/l14.jpg" class="card-img-top" alt="Eyewear Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Eyewear</h5>
-                                <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and
-                                    function.
-                                    Perfect for any occasion.</p>
-                                <a href="#" class="btn btn-primary">Shop Now</a>
+                    <div class="row pt-5">
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" class="card-img-top" alt="Eyewear Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gọng kính kim loại</h5>
+                                    <a href="#" class="btn btn-card">450.000đ</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMG/CacLoaiKinh/l15.jpg" class="card-img-top" alt="Eyewear Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Eyewear</h5>
-                                <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and
-                                    function.
-                                    Perfect for any occasion.</p>
-                                <a href="#" class="btn btn-primary">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../IMG/CacLoaiKinh/l16.jpg" class="card-img-top" alt="Eyewear Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Eyewear</h5>
-                                <p class="card-text">Discover our latest collection of stylish eyewear that combines fashion and
-                                    function.
-                                    Perfect for any occasion.</p>
-                                <a href="#" class="btn btn-primary">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                
                 </div>
-                
             </div>
         </div>
-
         <footer>
             <p>&copy; Nguyễn Thị Thanh Hiền</p>
         </footer>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            lucide.createIcons(); 
-        });
-        let prevScrollPos = window.pageYOffset;
-            const navbar = document.querySelector("nav");
-
-            window.addEventListener("scroll", function () {
-                const currentScrollPos = window.pageYOffset;
-
-                if (prevScrollPos > currentScrollPos || currentScrollPos <= 0) {
-                    navbar.style.top = "50px"; // trở về vị trí ban đầu
-                } else {
-                    navbar.style.top = "-100px"; // ẩn đi
-                }
-
-                prevScrollPos = currentScrollPos;
-            });
-    </script>
+    <script src="../JS/index.js"></script>
 </body>
 
 </html>
