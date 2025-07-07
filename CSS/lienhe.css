@@ -1,0 +1,114 @@
+/* === CONTACT PAGE MAP STYLE === */
+.contact-map-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-map-section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-map-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact-map-wrapper iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    display: block;
+}
+
+/* === CONTACT PAGE STORE LIST STYLE === */
+.contact-store-section {
+    padding: 60px 0;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-store-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-store-section table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-store-section th,
+.contact-store-section td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.contact-store-section th {
+    background-color: #f687ac;
+    color: white;
+    font-weight: 600;
+}
+
+.contact-store-section tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.contact-store-section a {
+    color: #f687ac;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-store-section a:hover {
+    text-decoration: underline;
+}
+
+.faq-section {
+    margin: 0;
+    padding: 60px 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfdfd;
+}
+
+.faq-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.faq-section ul {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    padding-left: 0;
+}
+
+.faq-section li::before {
+    content: "▼ ";
+    color: #f687ac;
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+
+.faq-section li {
+    margin-bottom: 10px;
+}

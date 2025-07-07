@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIHA - Giới thiệu về chúng tôi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
+  <script src="../LIB/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/gioithieu.css">
+  <link rel="stylesheet" href="../CSS/lienhe.css">
+  <link rel="stylesheet" href="../CSS/chinhsach.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
+    <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
+
+    <div class="slider-dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand me-4" href="home.html">
+        <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
+      </a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item me-4">
+            <a class="nav-link" href="home.html" aria-current="page">Trang chủ</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link active" href="gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown me-4">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Sản phẩm</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Kính râm</a>
+              <a class="dropdown-item" href="#">Kính cận</a>
+              <a class="dropdown-item" href="#">Kính trẻ em</a>
+              <a class="dropdown-item" href="#">Kính chống ánh sáng xanh</a>
+            </div>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="lienhe.html">Liên hệ</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              class="form-control ip-search"
+              placeholder="Tìm kiếm sản phẩm"
+            />
+            <i class="fa-solid fa-magnifying-glass input-icon"></i>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg cart-icon position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#modalId"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg user-icon"
+            data-bs-toggle="modal"
+            data-bs-target="#modalId"
+          >
+            <i class="fa-regular fa-user"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+<main class="policy-container">
+    <section class="policy-section" id="chinhsachbaohanh">
+      <h1>Chính sách bảo hành</h1>
+      <p>HIHA cam kết bảo hành sản phẩm trong vòng 6 tháng kể từ ngày mua hàng đối với các lỗi kỹ thuật của nhà sản xuất.</p>
+      <ul>
+        <li>Sản phẩm được bảo hành khi có hóa đơn mua hàng.</li>
+        <li>Không áp dụng bảo hành cho lỗi do người dùng gây ra.</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="chinhsachdoitra">
+      <h1>Chính sách đổi trả</h1>
+      <p>Bạn có thể đổi trả sản phẩm trong vòng 7 ngày nếu đáp ứng điều kiện:</p>
+      <ul>
+        <li>Sản phẩm chưa qua sử dụng và còn nguyên tem mác.</li>
+        <li>Đổi trả miễn phí tại cửa hàng, phí vận chuyển do khách hàng chịu nếu gửi qua bưu điện.</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="chinhsachvanchuyen">
+      <h1>Chính sách vận chuyển</h1>
+      <p>HIHA giao hàng toàn quốc với chính sách vận chuyển rõ ràng:</p>
+      <ul>
+        <li>Miễn phí vận chuyển với đơn hàng từ 500.000đ trở lên.</li>
+        <li>Thời gian giao hàng: 2-5 ngày làm việc tùy khu vực.</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="chinhsachbaomat">
+      <h1>Chính sách bảo mật</h1>
+      <p>HIHA cam kết bảo mật thông tin cá nhân của khách hàng:</p>
+      <ul>
+        <li>Không chia sẻ thông tin cho bên thứ ba khi chưa có sự đồng ý.</li>
+        <li>Thông tin chỉ được sử dụng để xử lý đơn hàng và chăm sóc khách hàng.</li>
+      </ul>
+    </section>
+  </main>
+
+  <hr>
+
+  <section class="contact-cta-section container section-spacing text-center">
+    <h2 class="section-title">Khám phá thế giới kính mắt HIHA</h2>
+    <p class="lead mb-4">Hãy ghé thăm cửa hàng của chúng tôi để trải nghiệm trực tiếp sản phẩm và nhận tư vấn chuyên nghiệp từ đội ngũ HIHA.</p>
+    <a href="#" class="btn btn-primary btn-lg me-3">Tìm cửa hàng gần nhất</a>
+    <a href="#lienhe" class="btn btn-outline-primary btn-lg">Liên hệ ngay</a>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Đăng ký nhận khuyến mãi</h2>
+        <p>Nhập email của bạn để nhận thông tin về các ưu đãi độc quyền và sản phẩm mới nhất</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Nhập email của bạn" required>
+          <button type="submit">
+            <i class="fa-solid fa-envelope"></i>
+            Đăng ký
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer" id="lienhe">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <a href="home.html">
+                <div class="logos">
+                  <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
+                </div>
+              </a>
+              <span>HIHA</span>
+            </div>
+            <p>Chuyên cung cấp kính mắt thời trang chất lượng cao với giá cả hợp lý.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/chirihin04_?igsh=d3ZsZDAxNzlldjRx"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@nhinchiruachoi?_t=ZS-8xosX96W6h6&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h5>Liên kết nhanh</h5>
+            <ul>
+                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#lienhe">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h5>Chính sách</h5>
+            <ul>
+              <li><a href="#chinhsachbaohanh">Chính sách bảo hành</a></li>
+              <li><a href="#chinhsachdoitra">Chính sách đổi trả</a></li>
+              <li><a href="#chinhsachvanchuyen">Chính sách vận chuyển</a></li>
+              <li><a href="#chinhsachbaomat">Chính sách bảo mật</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h5>Thông tin liên hệ</h5>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Số 12 Nguyễn Văn Bảo, phường Hạnh Thông Tây, TP.HCM</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>0123 456 789</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="https://mail.google.com/" style="color: white; text-decoration: none;">ngthithanhhien04@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 HIHA. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div
+    class="modal fade"
+    id="modalId"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    role="dialog"
+    aria-labelledby="modalTitleId"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+      role="document"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Chức năng này đang được phát triển</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Xin lỗi quý khách, tính năng này hiện chưa khả dụng. Vui lòng quay lại sau!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,160 +1,160 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIHA - Kính Mắt Thời Trang</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <link href="../LIB/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/home.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIHA - Kính Mắt Thời Trang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/index.css">
 </head>
-
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loading-spinner">
-            <div class="spinner"></div>
-            <p>Đang tải...</p>
-        </div>
-    </div>
+  <div class="container-fluid">
+    <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
+    <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
 
-    <div class="container-fluid">
-        <!-- Header -->
-        <header id="main-header">
-    <!-- Navigation -->
-<nav id="main-nav">
-    <div class="nav-left">
-        <a href="#" id="logo-a" class="brand-link">
-            <div class="logos">
-                <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo">
-            </div>
-        </a>
-        <div class="nav-menu">
-            <a href="#" class="nav-link">Trang chủ</a>
-            <a href="#" class="nav-link">Giới thiệu</a>
-            <a href="#" class="nav-link">Sản phẩm</a>
-            <a href="#" class="nav-link">Blog</a>
-            <a href="#" class="nav-link">Liên hệ</a>
-        </div>
+    <div class="slider-dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
     </div>
-    
-    <div class="nav-right">
-        <div class="search-container">
-            <input type="text" placeholder="Tìm kiếm sản phẩm..." id="search-input">
-            <button class="search-btn" id="search-icon">
-                <i data-lucide="search"></i>
-            </button>
-        </div>
-        <a href="#" id="cart" class="nav-icon">
-            <i data-lucide="shopping-cart"></i>
-            <span class="cart-badge" id="cart-count">0</span>
-        </a>
-        <a href="#" id="login" class="nav-icon">
-            <i data-lucide="user"></i>
-        </a>
-        <button class="mobile-menu-btn" id="mobile-menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</nav>
-    <!-- Hero Background -->
-<section id="heroBanner" class="hero-banner" style="background-image: url('../IMG/user_model/h9.jpg');">
-    <div class="hero-content">
-        <h2 class="hero-title">SALE CHỐT HẠ</h2>
-        <p class="hero-subtitle">SĂN CỰC ĐÃ</p>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand me-4" href="home.html">
+        <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
+      </a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item me-4">
+            <a class="nav-link" href="home.html" aria-current="page">Trang chủ</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link active" href="gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown me-4">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Sản phẩm</a
+            >
+            <div class="dropdown-menu w-300" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Kính râm</a>
+              <a class="dropdown-item" href="#">Kính cận</a>
+              <a class="dropdown-item" href="#">Kính trẻ em</a>
+              <a class="dropdown-item" href="#">Kính chống ánh sáng xanh</a>
+            </div>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="lienhe.html">Liên hệ</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              class="form-control ip-search"
+              placeholder="Tìm kiếm sản phẩm"
+            />
+            <i class="fa-solid fa-magnifying-glass input-icon"></i>
+          </div>
 
-        <div class="promo-boxes">
-            <div class="promo-box">
-                <span class="promo-main">MUA 1</span>
-                <span class="promo-sub highlight">ĐƯỢC 2</span>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg cart-icon position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#modalId"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg user-icon"
+            data-bs-toggle="modal"
+            data-bs-target="#modalId"
+          >
+            <i class="fa-regular fa-user"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+    <!-- === QUICK CATEGORIES SECTION === -->
+<section class="categories-section">
+    <div class="container">
+        <h2 class="section-title">Danh mục sản phẩm</h2>
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <a href="#" class="text-decoration-none">
+                    <div class="category-card">
+                        <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Kính râm">
+                        <h3>Kính râm</h3>
+                    </div>
+                </a>
             </div>
-            <div class="promo-box">
-                <span class="promo-main">GỌNG KÍNH</span>
-                <span class="promo-sub price">1K</span>
+            <div class="col-6 col-md-3">
+                <a href="#" class="text-decoration-none">
+                    <div class="category-card">
+                        <img src="../IMG/CacLoaiKinh/l13.jpg" alt="Kính cận">
+                        <h3>Kính cận</h3>
+                    </div>
+                </a>
             </div>
-            <div class="promo-box">
-                <span class="promo-sub discount">-50<span class="small">%</span></span>
-                <span class="promo-main">KÍNH MẮT</span>
+            <div class="col-6 col-md-3">
+                <a href="#" class="text-decoration-none">
+                    <div class="category-card">
+                        <img src="../IMG/CacLoaiKinh/l12.jpg" alt="Kính trẻ em">
+                        <h3>Kính trẻ em</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="#" class="text-decoration-none">
+                    <div class="category-card">
+                        <img src="../IMG/CacLoaiKinh/l24.jpg" alt="Kính chống ánh sáng xanh">
+                        <h3>Kính chống ánh sáng xanh</h3>
+                    </div>
+                </a>
             </div>
         </div>
-
-        <button class="hero-button">
-            XEM NGAY <span class="arrow">&rsaquo;</span>
-        </button>
     </div>
 </section>
 
-
-    <div class="hero-overlay"></div>
-    
-    <!-- Navigation Controls -->
-    <button id="prevBtnHeader" class="arrow-btn left" aria-label="Previous slide">
-        <i data-lucide="chevron-left"></i>
-    </button>
-    <button id="nextBtnHeader" class="arrow-btn right" aria-label="Next slide">
-        <i data-lucide="chevron-right"></i>
-    </button>
-
-    <!-- Slide Indicators -->
-    <div class="slide-indicators">
-        <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
-        <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
-        <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
-    </div>
-</div>
-</header>
-
-        <!-- Quick Categories -->
-        <section class="categories-section">
-            <div class="container">
-                <h2 class="section-title">Danh mục sản phẩm</h2>
-                <div class="row g-4">
-                    <div class="col-6 col-md-3">
-                        <div class="category-card">
-                            <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Kính râm">
-                            <h3>Kính râm</h3>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="category-card">
-                            <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Kính cận">
-                            <h3>Kính cận</h3>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="category-card">
-                            <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Kính trẻ em">
-                            <h3>Kính trẻ em</h3>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="category-card">
-                            <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Kính chống ánh sáng xanh">
-                            <h3>Kính chống ánh sáng xanh</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Special Offers -->
         <section class="offers-section">
             <div class="container">
                 <div class="offers-content">
                     <div class="offer-item">
-                        <i data-lucide="gift"></i>
+                        <i class="fa-solid fa-gift"></i>
                         <span>Mua 2 tặng 1</span>
                     </div>
                     <div class="offer-item">
-                        <i data-lucide="truck"></i>
+                        <i class="fa-solid fa-truck"></i>
                         <span>Miễn phí ship toàn quốc</span>
                     </div>
                     <div class="offer-item">
-                        <i data-lucide="clock"></i>
+                        <i class="fa-solid fa-clock"></i>
                         <span>Ưu đãi đến 15/7</span>
                     </div>
                 </div>
@@ -168,7 +168,7 @@
                     <h2 class="section-title">Bán chạy nhất</h2>
                     <a href="#" class="view-all-btn">
                         Xem tất cả sản phẩm
-                        <i data-lucide="arrow-right"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
                 <div class="slider-wrapper overflow-hidden">
@@ -177,10 +177,10 @@
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div class="product-card">
                                 <div class="product-image">
-                                    <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Gọng kính kim loại">
+                                    <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Gọng kính kim loại">
                                     <div class="product-overlay">
-                                        <button class="quick-view-btn">Xem nhanh</button>
-                                        <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                        <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                        <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                     </div>
                                 </div>
                                 <div class="product-info">
@@ -200,10 +200,10 @@
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div class="product-card">
                                 <div class="product-image">
-                                    <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Gọng kính kim loại">
+                                    <img src="../IMG/CacLoaiKinh/l18.jpg" alt="Gọng kính kim loại">
                                     <div class="product-overlay">
-                                        <button class="quick-view-btn">Xem nhanh</button>
-                                        <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                        <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                        <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                     </div>
                                 </div>
                                 <div class="product-info">
@@ -222,10 +222,10 @@
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div class="product-card">
                                 <div class="product-image">
-                                    <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Gọng kính kim loại">
+                                    <img src="../IMG/CacLoaiKinh/l13.jpg" alt="Gọng kính kim loại">
                                     <div class="product-overlay">
-                                        <button class="quick-view-btn">Xem nhanh</button>
-                                        <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                        <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                        <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                     </div>
                                 </div>
                                 <div class="product-info">
@@ -244,10 +244,10 @@
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div class="product-card">
                                 <div class="product-image">
-                                    <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Gọng kính kim loại">
+                                    <img src="../IMG/CacLoaiKinh/l9.jpg" alt="Gọng kính kim loại">
                                     <div class="product-overlay">
-                                        <button class="quick-view-btn">Xem nhanh</button>
-                                        <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                        <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                        <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                     </div>
                                 </div>
                                 <div class="product-info">
@@ -266,10 +266,10 @@
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div class="product-card">
                                 <div class="product-image">
-                                    <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Gọng kính kim loại">
+                                    <img src="../IMG/CacLoaiKinh/l14.jpg" alt="Gọng kính kim loại">
                                     <div class="product-overlay">
-                                        <button class="quick-view-btn">Xem nhanh</button>
-                                        <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                        <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                        <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                     </div>
                                 </div>
                                 <div class="product-info">
@@ -296,21 +296,21 @@
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="collection-card">
-                            <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Bộ sưu tập nam">
+                            <img src="../IMG/user_model/bstnam.jpeg" alt="Bộ sưu tập nam">
                             <div class="collection-overlay">
                                 <h3>Bộ sưu tập Nam</h3>
                                 <p>Phong cách mạnh mẽ và lịch lãm</p>
-                                <button class="collection-btn">Khám phá</button>
+                                <a href="#" class="collection-btn">Khám phá</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="collection-card">
-                            <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Bộ sưu tập nữ">
+                            <img src="../IMG/user_model/bstnu.png" alt="Bộ sưu tập nữ">
                             <div class="collection-overlay">
                                 <h3>Bộ sưu tập Nữ</h3>
                                 <p>Thanh lịch và quyến rũ</p>
-                                <button class="collection-btn">Khám phá</button>
+                                <a href="#" class="collection-btn">Khám phá</a>
                             </div>
                         </div>
                     </div>
@@ -324,6 +324,10 @@
                 <div class="bosuutapmoinhat-nav">
                     <h2 class="section-title">Bộ sưu tập mới nhất</h2>
                 </div>
+                <div class="bosuutapmoinhat-controls">
+                    <button class="bosuutap-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="bosuutap-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
                 <div class="bosuutapmoinhat-content">
                     <div id="mau1" class="collection active">
                         <div class="row g-4">
@@ -333,8 +337,8 @@
                                     <div class="product-image">
                                         <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
                                         <div class="product-overlay">
-                                            <button class="quick-view-btn">Xem nhanh</button>
-                                            <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                     <div class="product-info">
@@ -348,8 +352,8 @@
                                     <div class="product-image">
                                         <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
                                         <div class="product-overlay">
-                                            <button class="quick-view-btn">Xem nhanh</button>
-                                            <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                     <div class="product-info">
@@ -363,8 +367,8 @@
                                     <div class="product-image">
                                         <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
                                         <div class="product-overlay">
-                                            <button class="quick-view-btn">Xem nhanh</button>
-                                            <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                     <div class="product-info">
@@ -378,8 +382,8 @@
                                     <div class="product-image">
                                         <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
                                         <div class="product-overlay">
-                                            <button class="quick-view-btn">Xem nhanh</button>
-                                            <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                     <div class="product-info">
@@ -398,8 +402,8 @@
                                     <div class="product-image">
                                         <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
                                         <div class="product-overlay">
-                                            <button class="quick-view-btn">Xem nhanh</button>
-                                            <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                     <div class="product-info">
@@ -417,8 +421,8 @@
                                     <div class="product-image">
                                         <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
                                         <div class="product-overlay">
-                                            <button class="quick-view-btn">Xem nhanh</button>
-                                            <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                     <div class="product-info">
@@ -436,8 +440,8 @@
                                     <div class="product-image">
                                         <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
                                         <div class="product-overlay">
-                                            <button class="quick-view-btn">Xem nhanh</button>
-                                            <button class="add-to-cart-btn">Thêm vào giỏ</button>
+                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                         </div>
                                     </div>
                                     <div class="product-info">
@@ -517,8 +521,8 @@
                 </div>
             </div>
         </section>
-
-        <!-- Newsletter -->
+    </div>
+  <!-- Newsletter -->
         <section class="newsletter-section">
             <div class="container">
                 <div class="newsletter-content">
@@ -527,7 +531,7 @@
                     <form class="newsletter-form">
                         <input type="email" placeholder="Nhập email của bạn" required>
                         <button type="submit">
-                            <i data-lucide="mail"></i>
+                            <i class="fa-solid fa-envelope"></i>
                             Đăng ký
                         </button>
                     </form>
@@ -542,16 +546,18 @@
                     <div class="col-md-3">
                         <div class="footer-section">
                             <div class="footer-logo">
-                                <div class="logos">
-                                    <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
-                                </div>
+                                <a href="#">
+                                    <div class="logos">
+                                        <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
+                                    </div>
+                                </a>
                                 <span>HIHA</span>
                             </div>
                             <p>Chuyên cung cấp kính mắt thời trang chất lượng cao với giá cả hợp lý.</p>
                             <div class="social-links">
-                                <a href="#"><i data-lucide="facebook"></i></a>
-                                <a href="#"><i data-lucide="instagram"></i></a>
-                                <a href="#"><i data-lucide="youtube"></i></a>
+                                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/chirihin04_?igsh=d3ZsZDAxNzlldjRx"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@nhinchiruachoi?_t=ZS-8xosX96W6h6&_r=1"><i class="fa-brands fa-tiktok"></i></a>
                             </div>
                         </div>
                     </div>
@@ -559,10 +565,11 @@
                         <div class="footer-section">
                             <h5>Liên kết nhanh</h5>
                             <ul>
-                                <li><a href="#">Giới thiệu</a></li>
+                                <li><a href="home.html">Trang chủ</a></li>
+                                <li><a href="gioithieu.html">Giới thiệu</a></li>
                                 <li><a href="#">Sản phẩm</a></li>
                                 <li><a href="#">Blog</a></li>
-                                <li><a href="#">Liên hệ</a></li>
+                                <li><a href="lienhe.html">Liên hệ</a></li>
                             </ul>
                         </div>
                     </div>
@@ -570,10 +577,10 @@
                         <div class="footer-section">
                             <h5>Chính sách</h5>
                             <ul>
-                                <li><a href="#">Chính sách bảo hành</a></li>
-                                <li><a href="#">Chính sách đổi trả</a></li>
-                                <li><a href="#">Chính sách vận chuyển</a></li>
-                                <li><a href="#">Chính sách bảo mật</a></li>
+                                <li><a href="chinhsach.html">Chính sách bảo hành</a></li>
+                                <li><a href="chinhsach.html">Chính sách đổi trả</a></li>
+                                <li><a href="chinhsach.html">Chính sách vận chuyển</a></li>
+                                <li><a href="chinhsach.html">Chính sách bảo mật</a></li>
                             </ul>
                         </div>
                     </div>
@@ -582,16 +589,16 @@
                             <h5>Thông tin liên hệ</h5>
                             <div class="contact-info">
                                 <div class="contact-item">
-                                    <i data-lucide="map-pin"></i>
-                                    <span>123 Đường ABC, Quận 1, TP.HCM</span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Số 12 Nguyễn Văn Bảo, phường Hạnh Thông Tây, TP.HCM</span>
                                 </div>
                                 <div class="contact-item">
-                                    <i data-lucide="phone"></i>
+                                    <i class="fa-solid fa-phone"></i>
                                     <span>0123 456 789</span>
                                 </div>
                                 <div class="contact-item">
-                                    <i data-lucide="mail"></i>
-                                    <span>info@hiha.com</span>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="https://mail.google.com/" style="color: white; text-decoration: none;">ngthithanhhien04@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -602,9 +609,45 @@
                 </div>
             </div>
         </footer>
-    </div>
 
-    <script src="../LIB/bootstrap.bundle.min.js"></script>
-    <script src="../JS/index.js"></script>
+  <!-- ✅ Modal Đặt ở ngoài phần navbar-collapse -->
+  <div
+    class="modal fade"
+    id="modalId"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    role="dialog"
+    aria-labelledby="modalTitleId"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+      role="document"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Thông tin</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">Nội dung modal ở đây</div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Đóng
+          </button>
+          <button type="button" class="btn btn-primary">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

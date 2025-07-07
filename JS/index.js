@@ -1,59 +1,110 @@
-document.addEventListener("DOMContentLoaded", () => {
-    lucide.createIcons(); 
+// Đợi cho toàn bộ DOM và các tài nguyên load xong
+window.addEventListener("load", () => {
+    // Ẩn màn hình loading
+    const loadingScreen = document.getElementById("loading-screen");
+    if (loadingScreen) {
+        loadingScreen.style.display = "none";
+    }
 });
-let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector("nav");
 
-    window.addEventListener("scroll", function () {
-        const currentScrollPos = window.pageYOffset;
+// Xử lý nút tìm kiếm
+// const searchBtn = document.getElementById("search-icon");
+// const searchInput = document.getElementById("search-input");
 
-        if (prevScrollPos > currentScrollPos || currentScrollPos <= 0) {
-            navbar.style.top = "50px"; // trở về vị trí ban đầu
-        } else {
-            navbar.style.top = "-100px"; // ẩn đi
-        }
+// if (searchBtn && searchInput) {
+//     searchBtn.addEventListener("click", () => {
+//         const keyword = searchInput.value.trim();
+//         if (keyword) {
+//             alert(`Tìm kiếm: ${keyword}`);
+//             // Ở đây bạn có thể chuyển hướng: window.location.href = `/search.html?q=${keyword}`;
+//         } else {
+//             alert("Vui lòng nhập từ khóa tìm kiếm.");
+//         }
+//     });
+// }
 
-        prevScrollPos = currentScrollPos;
-    });
-    const slider = document.getElementById('productSlider');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
+// Xử lý slider ảnh nền (Hero Background)
+// const backgroundImages = [
+//     "../IMG/user_model/a1.jpg",
+//     "../IMG/user_model/h9.jpg",
+//     "../IMG/user_model/a1.jpg"
+// ];
+// let currentSlide = 0;
 
-        let currentIndex = 0;
-        const cardWidth = 18 * 16 + 24; // 18rem + khoảng cách (giả sử 24px/margin)
-        const visibleCards = 4;
-        const totalCards = slider.children.length;
-        const maxIndex = Math.ceil(totalCards / visibleCards) - 1;
+// const headerBg = document.getElementById("headerBackground");
+// const indicators = document.querySelectorAll(".indicator");
+// const prevBtn = document.getElementById("prevBtnHeader");
+// const nextBtn = document.getElementById("nextBtnHeader");
 
-        function updateSlider() {
-            slider.style.transform = `translateX(-${currentIndex * (cardWidth * visibleCards)}px)`;
-        }
+// function updateSlide(index) {
+//     currentSlide = index;
+//     headerBg.src = backgroundImages[currentSlide];
+//     indicators.forEach((dot, i) => {
+//         dot.classList.toggle("active", i === index);
+//     });
+//     if (window.lucide) lucide.createIcons(); // cập nhật lại icon nếu có thay đổi DOM
+// }
 
-        nextBtn.addEventListener('click', () => {
-            if (currentIndex < maxIndex) {
-                currentIndex++;
-                updateSlider();
-            }
-        });
+// Nút điều hướng slider
+// if (prevBtn) {
+//     prevBtn.addEventListener("click", () => {
+//         const prevIndex = (currentSlide - 1 + backgroundImages.length) % backgroundImages.length;
+//         updateSlide(prevIndex);
+//     });
+// }
 
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateSlider();
-            }
-        });
-    const navLinks = document.querySelectorAll('.nav-link[data-target]');
-        const collections = document.querySelectorAll('.collection');
+// if (nextBtn) {
+//     nextBtn.addEventListener("click", () => {
+//         const nextIndex = (currentSlide + 1) % backgroundImages.length;
+//         updateSlide(nextIndex);
+//     });
+// }
 
-        navLinks.forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                // Lấy ID của mẫu tương ứng
-                const target = link.getAttribute('data-target');
+// indicators.forEach((dot, index) => {
+//     dot.addEventListener("click", () => {
+//         updateSlide(index);
+//     });
+// });
 
-                // Ẩn tất cả các collection
-                collections.forEach(col => col.classList.remove('active'));
+// Nút "Thêm vào giỏ"
+// const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+// const cartCount = document.getElementById("cart-count");
+// let count = 0;
 
-                // Hiển thị collection tương ứng
-                document.getElementById(target).classList.add('active');
-            });
-    });
+// addToCartButtons.forEach(button => {
+//     button.addEventListener("click", () => {
+//         count++;
+//         if (cartCount) {
+//             cartCount.textContent = count;
+//         }
+//     });
+// });
+
+// Xem nhanh sản phẩm (mẫu alert, bạn có thể mở modal nếu có)
+// const quickViewButtons = document.querySelectorAll(".quick-view-btn");
+// quickViewButtons.forEach(button => {
+//     button.addEventListener("click", () => {
+//         alert("Xem nhanh sản phẩm (chưa triển khai modal).");
+//     });
+// });
+
+//Ẩn menu khi lướt xuống
+// let lastScrollTop = 0;
+// const mainNav = document.getElementById("main-nav");
+// const scrollThreshold = 100;
+
+// window.addEventListener("scroll", () => {
+//     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+//     if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+//         mainNav.classList.add("slide-up-hidden");
+//     } else {
+//         mainNav.classList.remove("slide-up-hidden");
+//     }
+//     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+//     if (currentScroll > 50) { 
+//         mainNav.classList.add("scrolled");
+//     } else {
+//         mainNav.classList.remove("scrolled");
+//     }
+// });

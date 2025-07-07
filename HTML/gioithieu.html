@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIHA - Giới thiệu về chúng tôi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
+  <script src="../LIB/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/gioithieu.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
+    <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
+
+    <div class="slider-dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand me-4" href="home.html">
+        <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
+      </a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item me-4">
+            <a class="nav-link" href="home.html" aria-current="page">Trang chủ</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link active" href="gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown me-4">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Sản phẩm</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Kính râm</a>
+              <a class="dropdown-item" href="#">Kính cận</a>
+              <a class="dropdown-item" href="#">Kính trẻ em</a>
+              <a class="dropdown-item" href="#">Kính chống ánh sáng xanh</a>
+            </div>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="lienhe.html">Liên hệ</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              class="form-control ip-search"
+              placeholder="Tìm kiếm sản phẩm"
+            />
+            <i class="fa-solid fa-magnifying-glass input-icon"></i>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg cart-icon position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#modalId"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg user-icon"
+            data-bs-toggle="modal"
+            data-bs-target="#modalId"
+          >
+            <i class="fa-regular fa-user"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section class="about-hero" id="gioithieu">
+    <div class="about-hero-content">
+      <h1>Về HIHA - Kính Mắt Thời Trang</h1>
+      <p>Hành trình của chúng tôi bắt đầu từ niềm đam mê mang đến những chiếc kính không chỉ là phụ kiện, mà còn là tuyên ngôn phong cách và sự bảo vệ tối ưu cho đôi mắt của bạn.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="mission-vision-section container section-spacing">
+    <h2 class="section-title">Sứ mệnh và Tầm nhìn của chúng tôi</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="icon-box bg-light">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Sứ mệnh</h3>
+            <p class="lead">Cung cấp những sản phẩm kính mắt chất lượng cao, đa dạng về mẫu mã và phong cách, giúp khách hàng tự tin thể hiện cá tính, đồng thời bảo vệ sức khỏe đôi mắt một cách tốt nhất.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="icon-box bg-light">
+          <i class="fa-solid fa-eye"></i>
+          <h3>Tầm nhìn</h3>
+          <p class="lead">Trở thành thương hiệu kính mắt hàng đầu tại Việt Nam, được khách hàng tin tưởng lựa chọn bởi chất lượng sản phẩm vượt trội, dịch vụ chuyên nghiệp và xu hướng thời trang cập nhật.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="our-story-section container section-spacing">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <h2 class="section-title text-start mb-4">Câu chuyện của HIHA</h2>
+        <p class="lead">HIHA được thành lập vào năm 2025 với mong muốn thay đổi cách mọi người nhìn nhận về kính mắt.</p>
+        <p class="text">Chúng tôi tin rằng kính không chỉ là vật dụng hỗ trợ thị lực hay che nắng đơn thuần, mà còn là một phần quan trọng định hình phong cách cá nhân và thể hiện gu thẩm mỹ.</p>
+        <p class="text">Từ những ngày đầu, HIHA đã không ngừng tìm kiếm và chọn lọc những chất liệu tốt nhất, áp dụng công nghệ sản xuất tiên tiến để tạo ra những sản phẩm bền đẹp, thoải mái và an toàn cho người sử dụng. Chúng tôi tự hào mang đến sự kết hợp hoàn hảo giữa thời trang và chức năng.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="../IMG/user_model/kinhnu.png" class="img-fluid w-50 mx-auto d-block" alt="Our Story at HIHA" >
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="values-section container section-spacing bg-light">
+    <h2 class="section-title">Giá trị cốt lõi của chúng tôi</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="value-item">
+          <i class="fa-solid fa-gem"></i>
+          <div>
+            <h4>Chất lượng hàng đầu</h4>
+            <p class="lead">Chúng tôi cam kết mang đến những sản phẩm kính mắt được làm từ vật liệu cao cấp, đảm bảo độ bền, thoải mái và an toàn cho người dùng.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <i class="fa-solid fa-lightbulb"></i>
+          <div>
+            <h4>Sáng tạo và Xu hướng</h4>
+            <p class="lead">Liên tục cập nhật những mẫu mã mới nhất, đa dạng về kiểu dáng và màu sắc, dẫn đầu xu hướng thời trang kính mắt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="value-item">
+          <i class="fa-solid fa-handshake"></i>
+          <div>
+            <h4>Tận tâm với khách hàng</h4>
+            <p class="lead">Đội ngũ HIHA luôn lắng nghe, tư vấn nhiệt tình và hỗ trợ khách hàng một cách chuyên nghiệp, đặt sự hài lòng của bạn lên hàng đầu.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <i class="fa-solid fa-shield-alt"></i>
+          <div>
+            <h4>Đáng tin cậy</h4>
+            <p class="lead">Minh bạch trong thông tin sản phẩm, giá cả và chính sách bảo hành, đổi trả, xây dựng niềm tin vững chắc với khách hàng.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="our-team-section container section-spacing">
+    <h2 class="section-title">Đội ngũ của chúng tôi</h2>
+    <div class="row g-4">
+      <div class="col-md-4 col-sm-6">
+        <div class="team-member-card">
+          <img src="../IMG/user_model/hien.png" alt="Thành viên đội 1">
+          <h5>Nguyễn Thị Thanh Hiền</h5>
+          <p>Nhóm trưởng - Nhóm 3</p>
+          <p class="lead">Phân chia công việc cho từng thành viên, đảm nhiệm phần Giao diện chính: Trang chủ, Giới thiệu, Liên hệ, Mapsite</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="team-member-card">
+          <img src="../IMG/user_model/hoa.png" alt="Thành viên đội 2">
+          <h5>Tô Quỳnh Hoa</h5>
+          <p>Thành viên - Nhóm 3</p>
+          <p class="lead">Đảm nhiệm phần Thanh toán và Blog: Trang thanh toán, Danh sách Blog, Chi tiết một Blog.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="team-member-card">
+          <img src="../IMG/user_model/giahuy.png" alt="Thành viên đội 3">
+          <h5>Đào Vũ Gia Huy</h5>
+          <p>Thành viên - Nhóm 3</p>
+          <p class="lead">Đảm nhiệm phần Tài khoản người dùng: Đăng ký, Đăng nhập, Xác nhận đơn</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="team-member-card">
+          <img src="../IMG/user_model/huy.png" alt="Thành viên đội 2">
+          <h5>Nguyễn Quốc Huy</h5>
+          <p>Thành viên - Nhóm 3</p>
+          <p class="lead">Đảm nhiệm phần Sản phẩm: Danh sách sản phẩm, Chi tiết sản phẩm, Giỏ hàng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="contact-cta-section container section-spacing text-center">
+    <h2 class="section-title">Khám phá thế giới kính mắt HIHA</h2>
+    <p class="lead mb-4">Hãy ghé thăm cửa hàng của chúng tôi để trải nghiệm trực tiếp sản phẩm và nhận tư vấn chuyên nghiệp từ đội ngũ HIHA.</p>
+    <a href="lienhe.html" class="btn btn-primary btn-lg me-3">Tìm cửa hàng gần nhất</a>
+    <a href="lienhe.html" class="btn btn-outline-primary btn-lg">Liên hệ ngay</a>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Đăng ký nhận khuyến mãi</h2>
+        <p>Nhập email của bạn để nhận thông tin về các ưu đãi độc quyền và sản phẩm mới nhất</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Nhập email của bạn" required>
+          <button type="submit">
+            <i class="fa-solid fa-envelope"></i>
+            Đăng ký
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <a href="home.html">
+                <div class="logos">
+                  <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
+                </div>
+              </a>
+              <span>HIHA</span>
+            </div>
+            <p>Chuyên cung cấp kính mắt thời trang chất lượng cao với giá cả hợp lý.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/chirihin04_?igsh=d3ZsZDAxNzlldjRx"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@nhinchiruachoi?_t=ZS-8xosX96W6h6&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h5>Liên kết nhanh</h5>
+            <ul>
+                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="#gioithieu">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h5>Chính sách</h5>
+            <ul>
+              <li><a href="chinhsach.html">Chính sách bảo hành</a></li>
+              <li><a href="chinhsach.html">Chính sách đổi trả</a></li>
+              <li><a href="chinhsach.html">Chính sách vận chuyển</a></li>
+              <li><a href="chinhsach.html">Chính sách bảo mật</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h5>Thông tin liên hệ</h5>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Số 12 Nguyễn Văn Bảo, phường Hạnh Thông Tây, TP.HCM</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>0123 456 789</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="https://mail.google.com/" style="color: white; text-decoration: none;">ngthithanhhien04@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 HIHA. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div
+    class="modal fade"
+    id="modalId"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    role="dialog"
+    aria-labelledby="modalTitleId"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+      role="document"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Chức năng này đang được phát triển</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Xin lỗi quý khách, tính năng này hiện chưa khả dụng. Vui lòng quay lại sau!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
