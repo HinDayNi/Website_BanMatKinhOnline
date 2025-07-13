@@ -1,124 +1,329 @@
 <!DOCTYPE html>
-<html lang="vi">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanh Toán | HIHA</title>
-    <link rel="stylesheet" href="../css/thanhtoan.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <link rel="icon" href="../img/logo/logo-modified.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
-    <script src="../LIB/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/index.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIHA - Kính Mắt Thời Trang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
+  <script src="../LIB/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/thanhtoan.css">
 </head>
-
 <body>
+<div class="container-fluid">
+    <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
+    <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
 
-    <div class="container">
-        <h1>Thanh Toán</h1>
-        <form>
-            <label for="name">Họ tên</label>
-            <input type="text" id="name" name="name" required>
+    <div class="slider-dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand me-4" href="home.html">
+        <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
+      </a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item me-4">
+            <a class="nav-link" href="home.html" aria-current="page">Trang chủ</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link active" href="gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown me-4">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Sản phẩm</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Kính râm</a>
+              <a class="dropdown-item" href="#">Kính cận</a>
+              <a class="dropdown-item" href="#">Kính trẻ em</a>
+              <a class="dropdown-item" href="#">Kính chống ánh sáng xanh</a>
+            </div>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="lienhe.html">Liên hệ</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              class="form-control ip-search"
+              placeholder="Tìm kiếm sản phẩm"
+            />
+            <i class="fa-solid fa-magnifying-glass input-icon"></i>
+          </div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg cart-icon position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#modalIdX"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+          </button>
 
-            <label for="sdt">Số điện thoại</label>
-            <input type="text" id="sdt" name="sdt" required>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg user-icon"
+            data-bs-toggle="modal"
+            data-bs-target="#modalId"
+          >
+            <i class="fa-regular fa-user"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-            <label for="address">Địa chỉ giao hàng</label>
-            <input type="text" id="address" name="address" required>
+    <div class="checkout-form">
+    <h1>Thanh Toán</h1>
+    <form>
+        <label for="name">Họ tên</label>
+        <input type="text" id="name" name="name" required>
 
-            <label for="payment">Phương thức thanh toán</label>
-            <select id="payment" name="payment">
-                <option value="cod">Thanh toán khi nhận hàng (COD)</option>
-                <option value="card">Thẻ tín dụng/Ghi nợ</option>
-                <option value="momo">Momo</option>
-            </select>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="notes">Ghi chú</label>
-            <textarea id="notes" name="notes" rows="3"></textarea>
+        <label for="sdt">Số điện thoại</label>
+        <input type="text" id="sdt" name="sdt" required>
 
-            <button type="submit">Xác nhận đặt hàng</button>
-        </form>
+        <label for="address">Địa chỉ giao hàng</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="payment">Phương thức thanh toán</label>
+        <select id="payment" name="payment">
+        <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+        <option value="card">Thẻ tín dụng/Ghi nợ</option>
+        <option value="momo">Momo</option>
+        </select>
+
+        <label for="notes">Ghi chú</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+
+        <button type="submit">Xác nhận đặt hàng</button>
+    </form>
     </div>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="footer-section">
-                        <div class="footer-logo">
-                            <a href="#">
-                                <div class="logos">
-                                    <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="footer-section">
+                            <div class="footer-logo">
+                                <a href="#">
+                                    <div class="logos">
+                                        <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
+                                    </div>
+                                </a>
+                                <span>HIHA</span>
+                            </div>
+                            <p>Chuyên cung cấp kính mắt thời trang chất lượng cao với giá cả hợp lý.</p>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/chirihin04_?igsh=d3ZsZDAxNzlldjRx"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@nhinchiruachoi?_t=ZS-8xosX96W6h6&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-section">
+                            <h5>Liên kết nhanh</h5>
+                            <ul>
+                                <li><a href="home.html">Trang chủ</a></li>
+                                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                                <li><a href="#">Sản phẩm</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="lienhe.html">Liên hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-section">
+                            <h5>Chính sách</h5>
+                            <ul>
+                                <li><a href="chinhsach.html">Chính sách bảo hành</a></li>
+                                <li><a href="chinhsach.html">Chính sách đổi trả</a></li>
+                                <li><a href="chinhsach.html">Chính sách vận chuyển</a></li>
+                                <li><a href="chinhsach.html">Chính sách bảo mật</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-section">
+                            <h5>Thông tin liên hệ</h5>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Số 12 Nguyễn Văn Bảo, phường Hạnh Thông Tây, TP.HCM</span>
                                 </div>
-                            </a>
-                            <span>HIHA</span>
-                        </div>
-                        <p>Chuyên cung cấp kính mắt thời trang chất lượng cao với giá cả hợp lý.</p>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/chirihin04_?igsh=d3ZsZDAxNzlldjRx"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.tiktok.com/@nhinchiruachoi?_t=ZS-8xosX96W6h6&_r=1"><i
-                                    class="fa-brands fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-section">
-                        <h5>Liên kết nhanh</h5>
-                        <ul>
-                            <li><a href="home.html">Trang chủ</a></li>
-                            <li><a href="gioithieu.html">Giới thiệu</a></li>
-                            <li><a href="#">Sản phẩm</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="lienhe.html">Liên hệ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-section">
-                        <h5>Chính sách</h5>
-                        <ul>
-                            <li><a href="chinhsach.html">Chính sách bảo hành</a></li>
-                            <li><a href="chinhsach.html">Chính sách đổi trả</a></li>
-                            <li><a href="chinhsach.html">Chính sách vận chuyển</a></li>
-                            <li><a href="chinhsach.html">Chính sách bảo mật</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-section">
-                        <h5>Thông tin liên hệ</h5>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span>Số 12 Nguyễn Văn Bảo, phường Hạnh Thông Tây, TP.HCM</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fa-solid fa-phone"></i>
-                                <span>0123 456 789</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fa-solid fa-envelope"></i>
-                                <a href="https://mail.google.com/"
-                                    style="color: white; text-decoration: none;">info@hiha.com</a>
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>0123 456 789</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="https://mail.google.com/" style="color: white; text-decoration: none;">info@hiha.com</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 HIHA. Tất cả quyền được bảo lưu.</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 HIHA. Tất cả quyền được bảo lưu.</p>
+        </footer>
+
+  <!-- ✅ Modal Đặt ở ngoài phần navbar-collapse -->
+    <!-- Modal Đăng ký -->
+    <div class="modal fade" id="modalId" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="row g-0">
+                    <div class="col-md-6 d-none d-md-block">
+                        <img class="img-fluid" src="../IMG/user_model/bstnu.png" alt="model"
+                            style="object-fit: cover; height:800px;">
+                    </div>
+                    <div class="col-md-6 p-4 bg-white">
+                        <div class="modal-header border-0 pb-0">
+                            <h5 class="modal-title w-100 text-center" id="registerModalLabel">Đăng ký tài khoản HIHA</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="fullname" class="form-label">Họ và tên</label>
+                                    <input type="text" class="form-control" id="fullname"
+                                        placeholder="Nhập họ tên của bạn" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="example@gmail.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Mật khẩu</label>
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Tạo mật khẩu" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        placeholder="Nhập lại mật khẩu" required>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="agree" required>
+                                    <label class="form-check-label" for="agree">
+                                        Tôi đồng ý với <a href="#">chính sách & điều khoản</a>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-pink w-100">Đăng ký</button>
+                                <p class="text-center text-muted mt-3">Hoặc</p>
+                                <a href="https://www.google.com/?hl=vi" class="icon-gg">
+                                    <button type="button" class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2">
+                                    <i class="fa-brands fa-google"></i>
+                                    <span class="ms-2">Đăng nhập bằng Google</span>
+                                    </button>
+                                </a>
+                            </form>
+                            <p class="text-center mt-3 text-muted">Đã có tài khoản?
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"
+                                    data-bs-dismiss="modal">Đăng nhập</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
-</body>
+    </div>
 
+    <!-- Modal Đăng nhập -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="row g-0">
+                    <div class="col-md-6 d-none d-md-block">
+                        <img class="img-fluid" src="../IMG/user_model/bstnu.png" alt="model"
+                            style="object-fit: cover; height:800px;">
+                    </div>
+                    <div class="col-md-6 p-4 bg-white">
+                        <div class="modal-header border-0 pb-0">
+                            <h5 class="modal-title w-100 text-center" id="loginModalLabel">Đăng nhập tài khoản HIHA</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center mb-3">
+                                <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID" data-context="signin"
+                                    data-ux_mode="popup" data-callback="handleCredentialResponse"
+                                    data-auto_prompt="false"></div>
+                                <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="outline"
+                                    data-text="sign_in_with" data-size="large" data-logo_alignment="left"></div>
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="loginEmail"
+                                        placeholder="example@gmail.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Mật khẩu</label>
+                                    <input type="password" class="form-control" id="loginPassword"
+                                        placeholder="Nhập mật khẩu" required>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                                    </div>
+                                    <a href="#" class="text-decoration-none" style="color:#f687ac">Quên mật khẩu?</a>
+                                </div>
+                                <button type="submit" class="btn btn-pink w-100">Đăng nhập</button>
+                                <p class="text-center text-muted mt-3">Hoặc</p>
+                                <a href="https://www.google.com/?hl=vi" class="icon-gg">
+                                    <button type="button" class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2">
+                                    <i class="fa-brands fa-google"></i>
+                                    <span class="ms-2">Đăng nhập bằng Google</span>
+                                    </button>
+                                </a>
+                            </form>
+                            <p class="text-center mt-3 text-muted">Chưa có tài khoản?
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modalId"
+                                    data-bs-dismiss="modal">Đăng ký</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
