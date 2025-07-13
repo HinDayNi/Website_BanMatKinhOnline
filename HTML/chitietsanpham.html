@@ -10,8 +10,7 @@
   <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
   <script src="../LIB/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../CSS/index.css">
-  <link rel="stylesheet" href="../CSS/gioithieu.css">
-  <link rel="stylesheet" href="../CSS/lienhe.css">
+  <link rel="stylesheet" href="../CSS/sanpham.css">
 </head>
 <body>
   <div class="container-fluid">
@@ -103,79 +102,53 @@
     </nav>
   </div>
 
- <!-- Hero -->
-  <section class="about-hero" id="lienhe">
-    <div class="about-hero-content">
-      <h1>Liên hệ HIHA</h1>
-      <p>Chúng tôi sẵn sàng hỗ trợ bạn mọi lúc – hãy ghé qua hệ thống cửa hàng hoặc liên hệ trực tiếp!</p>
+<!-- Chi tiết sản phẩm -->
+  <div class="container my-5">
+    <div class="row product-detail">
+      <div class="col-md-6">
+        <img src="../IMG/CacLoaiKinh/l10.jpg" class="img-fluid rounded shadow-sm" alt="Gọng kính kim loại" />
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold">Gọng kính kim loại</h2>
+        <p class="text-muted">Mã SP: HIHA2807</p>
+        <p><strong>Xuất xứ:</strong> Việt Nam</p>
+        <p><strong>Tình trạng:</strong> <span class="text-success">Còn hàng</span></p>
+
+        <div class="price mb-3">
+          <span class="fs-3 fw-bold text-danger">684.000₫</span>
+          <span class="text-muted text-decoration-line-through ms-2">880.000₫</span>
+          <span class="badge bg-warning text-dark ms-2">-20%</span>
+        </div>
+
+        <div class="selectors mb-3">
+          <label class="form-label">Màu sắc</label>
+          <select class="form-select mb-2"><option>Chọn màu</option></select>
+
+          <label class="form-label">Kích thước</label>
+          <select class="form-select"><option>Chọn kích thước</option></select>
+        </div>
+
+        <div class="button-group d-flex gap-3 mb-4">
+          <button class="btn btn-danger btn-lg">Mua ngay</button>
+          <button class="btn btn-outline-secondary btn-lg">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="promotions mb-4">
+          <h5><i class="fa-solid fa-gift text-pink"></i> Ưu đãi</h5>
+          <ul>
+            <li>Giảm 200k với mã <strong>WELCOME200</strong></li>
+            <li>Giảm thêm 10% với mã <strong>GIAM10%DMGG</strong></li>
+          </ul>
+        </div>
+
+        <ul class="benefits list-unstyled">
+          <li><i class="fas fa-box-open text-primary"></i> Kiểm tra hàng khi nhận</li>
+          <li><i class="fas fa-exchange-alt text-warning"></i> Đổi trả trong 07 ngày</li>
+          <li><i class="fas fa-shipping-fast text-success"></i> Giao hàng toàn quốc, miễn phí với đơn ≥ 300k</li>
+        </ul>
+      </div>
     </div>
-  </section>
-
-  <!-- Store List -->
-  <section class="contact-store-section container">
-    <h3>Hệ Thống Cửa Hàng</h3>
-    <p class="text-center">⏰ Giờ làm việc: <strong>09:00 – 21:00</strong> hàng ngày, kể cả Chủ Nhật <br>📞 Tổng đài: <strong>1900 9999 37</strong></p>
-    <div class="table-responsive mt-4">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>STT</th>
-            <th>Quận</th>
-            <th>Địa chỉ</th>
-            <th>Sau sáp nhập</th>
-            <th>Hotline chi nhánh</th>
-            <th>Đỗ ô-tô</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>Tân Bình</td><td><a href="#">155 Nguyễn Thái Bình</a></td><td>Phường Tân Sơn Nhất</td><td>0939.482.668</td><td>Có</td></tr>
-          <tr><td>2</td><td>Quận 11</td><td><a href="#">199 Lê Đại Hành</a></td><td>Phường 11</td><td>0924.826.668</td><td>Có</td></tr>
-          <tr><td>3</td><td>Thủ Đức</td><td><a href="#">1/2 Chương Dương</a></td><td>Phường Thủ Đức</td><td>0931.482.668</td><td>Có</td></tr>
-          <tr><td>4</td><td>Bình Thạnh</td><td><a href="#">107 Xô Viết Nghệ Tĩnh</a></td><td>Phường Gia Định</td><td>0906.482.668</td><td>Có</td></tr>
-          <tr><td>5</td><td>Quận 1</td><td><a href="#">144B Phạm Viết Chánh</a></td><td>Phường Cầu Ông Lãnh</td><td>0901.446.668</td><td>Không</td></tr>
-          <tr><td>6</td><td>Gò Vấp</td><td><a href="#">438 Quang Trung</a></td><td>Phường Gò Vấp</td><td>0917.438.668</td><td>Có</td></tr>
-          <tr><td>7</td><td>Quận 7</td><td><a href="#">328 Nguyễn Thị Thập</a></td><td>Phường Tân Hưng</td><td>039.328.6668</td><td>Có</td></tr>
-          <tr><td>8</td><td>Quận 12</td><td><a href="#">123/1 Nguyễn Ảnh Thủ</a></td><td>Xã Bà Điểm</td><td>0792.123.668</td><td>Có</td></tr>
-          <tr><td>9</td><td>Quận 9</td><td><a href="#">252 Lê Văn Việt</a></td><td>Phường Tăng Nhơn Phú</td><td>0792.526.668</td><td>Có</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-    <!-- Google Map -->
-  <section class="contact-map-section" id="ggmap">
-    <h2>Vị trí cửa hàng chính</h2>
-    <div class="contact-map-wrapper">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.0099980305026!2d106.68426511048781!3d10.822158889284868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2sIndustrial%20University%20of%20Ho%20Chi%20Minh%20City!5e1!3m2!1sen!2s!4v1751864623664!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq-section">
-    <h3>Câu hỏi thường gặp</h3>
-    <ul>
-      <li>Sản phẩm có được bảo hành không?</li>
-      <hr>
-      <li>Tôi có thể tới cửa hàng để đo mắt & kiểm tra thị lực không?</li>
-      <hr>
-      <li>Tôi không biết cách chọn kính phù hợp với khuôn mặt của mình?</li>
-      <hr>
-      <li>Tôi có thể đặt hàng Online không?</li>
-      <hr>
-      <li>Tôi có được kiểm tra và thử kính trước khi thanh toán?</li>
-      <hr>
-      <li>Sản phẩm có hỗ trợ đổi trả không?</li>
-    </ul>
-  </section>
-
-  <hr>
-
-  <section class="contact-cta-section container section-spacing text-center">
-    <h2 class="section-title">Khám phá thế giới kính mắt HIHA</h2>
-    <p class="lead mb-4">Hãy ghé thăm cửa hàng của chúng tôi để trải nghiệm trực tiếp sản phẩm và nhận tư vấn chuyên nghiệp từ đội ngũ HIHA.</p>
-    <a href="#" class="btn btn-primary btn-lg me-3">Tìm cửa hàng gần nhất</a>
-    <a href="#lienhe" class="btn btn-outline-primary btn-lg">Liên hệ ngay</a>
-  </section>
+  </div>
 
   <section class="newsletter-section">
     <div class="container">
@@ -193,7 +166,7 @@
     </div>
   </section>
 
-  <footer class="main-footer" id="lienhe">
+  <footer class="main-footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-3">
@@ -219,10 +192,10 @@
             <h5>Liên kết nhanh</h5>
             <ul>
                 <li><a href="home.html">Trang chủ</a></li>
-                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="#gioithieu">Giới thiệu</a></li>
                 <li><a href="#">Sản phẩm</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#lienhe">Liên hệ</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
             </ul>
           </div>
         </div>

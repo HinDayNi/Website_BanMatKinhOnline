@@ -362,7 +362,7 @@ body {
     opacity: 1;
 }
 
-.quick-view-btn, .add-to-cart-btn {
+/* .quick-view-btn, .add-to-cart-btn {
     background: white;
     color: #2c3e50;
     border: none;
@@ -377,7 +377,7 @@ body {
 .quick-view-btn:hover, .add-to-cart-btn:hover {
     background: #f687ac;
     color: white;
-}
+} */
 
 .product-info {
     padding: 20px;
@@ -420,7 +420,7 @@ body {
     background: white;
     color: #2c3e50;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 25px;
     font-weight: 700;
     cursor: pointer;

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIHA - Sản Phẩm Của Chúng Tôi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
+    <script src="../LIB/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/sanpham.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="slider-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand me-4" href="home.html">
+                <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="home.html" aria-current="page">Trang chủ</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link active" href="gioithieu.html">Giới thiệu <span
+                                class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown me-4">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Kính râm</a>
+                            <a class="dropdown-item" href="#">Kính cận</a>
+                            <a class="dropdown-item" href="#">Kính trẻ em</a>
+                            <a class="dropdown-item" href="#">Kính chống ánh sáng xanh</a>
+                        </div>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="input-wrapper">
+                        <input type="text" class="form-control ip-search" placeholder="Tìm kiếm sản phẩm" />
+                        <i class="fa-solid fa-magnifying-glass input-icon"></i>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-lg cart-icon position-relative"
+                        data-bs-toggle="modal" data-bs-target="#modalId">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg user-icon" data-bs-toggle="modal"
+                        data-bs-target="#modalId">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row mt-1">
+            <!-- Bên trái: danh mục -->
+            <aside class="col-md-3 pt-5">
+                <h4 class="fw-bold my-3">Loại sản phẩm</h4>
+                <div class="border-bottom">
+                    <ul>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chon" id="sp1">
+                            <label class="form-check-label" for="sp1">Kính mát</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chon" id="sp2">
+                            <label class="form-check-label" for="sp2">Kính cận</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chon" id="sp3">
+                            <label class="form-check-label" for="sp3">Gọng nhựa</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chon" id="sp4">
+                            <label class="form-check-label" for="sp4">Gọng kim loại</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chon" id="sp5">
+                            <label class="form-check-label" for="sp5">Phụ kiện</label>
+                        </li>
+                    </ul>
+                </div>
+                <h4 class="fw-bold my-3">Giới tính</h4>
+                <div class="border-bottom">
+                    <ul>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chon" id="male">
+                            <label class="form-check-label" for="male">Nam</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chon" id="female">
+                            <label class="form-check-label" for="female">Nữ</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chon" id="uni">
+                            <label class="form-check-label" for="uni">Unisex</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chon" id="child">
+                            <label class="form-check-label" for="child">Trẻ em</label>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Bên phải: danh sách sản phẩm -->
+            <div class="col-md-9 pt-5">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="text-danger mt-2">Tất cả sản phẩm</h2>
+                    <div>
+                        <select class="form-select w-auto" id="sortSelect">
+                            <option selected>Tên A-Z:</option>
+                            <option value="low">Giá: giảm dần</option>
+                            <option value="high">Giá: tăng dần</option>
+                            <option value="old-new">Mới-cũ</option>
+                            <option value="M-sold">Bán chạy nhất</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col p-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="discount-product">-20%</span>
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Gọng kính kim loại">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Gọng kính kim loại</h5>
+                                <div class="product-rating">
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                </div>
+                                <div class="product-price d-flex align-content-center">
+                                    <p class="real-price">880.000đ</p>
+                                    <p class="sale-price">684.000đ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l14.jpg" alt="Gọng kính kim loại">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Kính râm thời trang</h5>
+                                <div class="product-rating">
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                </div>
+                                <div class="product-price">550.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Gọng kính kim loại">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Gọng kính kim loại</h5>
+                                <div class="product-rating">
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                </div>
+                                <div class="product-price">880.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="discount-product">-20%</span>
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Gọng kính kim loại">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Gọng kính kim loại</h5>
+                                <div class="product-rating">
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                </div>
+                                <div class="product-price d-flex align-content-center">
+                                    <p class="real-price">880.000đ</p>
+                                    <p class="sale-price">684.000đ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Gọng kính kim loại">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Gọng kính kim loại</h5>
+                                <div class="product-rating">
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                </div>
+                                <div class="product-price">880.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Gọng kính kim loại">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Gọng kính kim loại</h5>
+                                <div class="product-rating">
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                    <i data-lucide="star" class="star filled"></i>
+                                </div>
+                                <div class="product-price">880.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ul class="pagination justify-content-center mt-4 custom-pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="First">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&lsaquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">30</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&rsaquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Last">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <a href="#">
+                                <div class="logos">
+                                    <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
+                                </div>
+                            </a>
+                            <span>HIHA</span>
+                        </div>
+                        <p>Chuyên cung cấp kính mắt thời trang chất lượng cao với giá cả hợp lý.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/chirihin04_?igsh=d3ZsZDAxNzlldjRx"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@nhinchiruachoi?_t=ZS-8xosX96W6h6&_r=1"><i
+                                    class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-section">
+                        <h5>Liên kết nhanh</h5>
+                        <ul>
+                            <li><a href="home.html">Trang chủ</a></li>
+                            <li><a href="gioithieu.html">Giới thiệu</a></li>
+                            <li><a href="#">Sản phẩm</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="lienhe.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-section">
+                        <h5>Chính sách</h5>
+                        <ul>
+                            <li><a href="chinhsach.html">Chính sách bảo hành</a></li>
+                            <li><a href="chinhsach.html">Chính sách đổi trả</a></li>
+                            <li><a href="chinhsach.html">Chính sách vận chuyển</a></li>
+                            <li><a href="chinhsach.html">Chính sách bảo mật</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-section">
+                        <h5>Thông tin liên hệ</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Số 12 Nguyễn Văn Bảo, phường Hạnh Thông Tây, TP.HCM</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>0123 456 789</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="https://mail.google.com/"
+                                    style="color: white; text-decoration: none;">info@hiha.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HIHA. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
