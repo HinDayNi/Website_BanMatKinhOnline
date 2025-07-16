@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIHA - Giới thiệu về chúng tôi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
+  <script src="../LIB/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/ChinhSachBaoHanh.css">
+  <script src="../JS/ChinhSachBaoHanh.js"></script>
+</head>
+<body>
+  <div class="container-fluid" id="sliderContainer">
+    <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
+    <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
+
+    <div class="slider-dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand me-4" href="../HTML/home.html">
+        <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
+      </a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item me-4">
+            <a class="nav-link" href="../HTML/home.html" aria-current="page">Trang chủ</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link active" href="../HTML/gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown me-4">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Sản phẩm</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Kính râm</a>
+              <a class="dropdown-item" href="#">Kính cận</a>
+              <a class="dropdown-item" href="#">Kính trẻ em</a>
+              <a class="dropdown-item" href="#">Kính chống ánh sáng xanh</a>
+            </div>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="../HTML/blog.html">Blog</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="../HTML/lienhe.html">Liên hệ</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              class="form-control ip-search"
+              placeholder="Tìm kiếm sản phẩm"
+            />
+            <i class="fa-solid fa-magnifying-glass input-icon"></i>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg cart-icon position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#modalId"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg user-icon"
+            data-bs-toggle="modal"
+            data-bs-target="#modalId"
+          >
+            <i class="fa-regular fa-user"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+<main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <h2><b>Danh mục bảo hành</b></h2>
+                </div>
+            </div>
+    
+            <div class="row mt-3">
+                <div class="btn-group d-flex justify-content-center">
+                    <ul class="list-unstyled d-flex">
+                        <li>
+                            <button class="btn btn-light active" onclick="showContent('gongkinh', this)">Gọng kính và kính mát</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-light" onclick="showContent('trongkinh', this)">Tròng kính</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-light" onclick="showContent('khac', this)">Danh mục bảo hành khác</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row mt-3" id="table-baohanh">
+                <div class="col-md-12" id="gongkinhContent">
+                    <div class="row bg-secondary-subtle" id="title-baohanh">
+                        <div class="col-md-4 mt-3">
+                            <p class="p-left">Thời gian</p>
+                        </div>
+                        <div class="col-md-8 mt-3">
+                            <p style="font-weight: 600; ">Chi tiết bảo hành</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mt-3 align-center">
+                            <p class="p-left">30 ngày</p>
+                        </div>
+                        <div class="col-md-8 mt-3">
+                            <ul>
+                                <li>
+                                    <p class="p-right">Bảo hành 1 đổi 1: Quý khách được hỗ trợ đổi sản phẩm khác nếu có bất kỳ lỗi sản xuất nào như: rời mối hàn, gãy lò xo, bong lớp sơn.</p>
+                                </li>
+                                <li>
+                                    <p class="p-right">Trường hợp không còn sản phẩm trong kho, EYE-YT sẽ thay thế sản phẩm có giá trị tương đương. Quý khách vui lòng thanh toán phần chênh lệch khi chọn sản phẩm giá trị cao hơn.</p>
+                                </li>
+                                <li>
+                                    <p class="p-right">Trường hợp EYE-YT không thể sửa chữa gọng kính và không còn sản phẩm tương tự trong kho, cửa hàng sẽ thay thế bằng sản phẩm khác đồng giá hoặc tương đương. Quý khách vui lòng thanh toán phần chênh lệch khi chọn sản phẩm giá trị cao hơn.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mt-3 align-center">
+                            <p class="p-left">18 tháng</p>
+                        </div>
+                        <div class="col-md-8 mt-3">
+                            <ul>
+                                <li>
+                                    <p class="p-right">Bảo hành 18 tháng miễn phí đối với các lỗi kỹ thuật do nhà sản xuất như: gãy lo xo, ve mũi, lỏng ốc vít, rời mối hàn.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mt-3 align-center">
+                            <p class="p-left">Trọn đời</p>
+                        </div>
+                        <div class="col-md-8 mt-3">
+                            <ul>
+                                <li>
+                                    <p class="p-right">Quý khách được miễn phí các dịch vụ điều chỉnh, vệ sinh và bảo dưỡng trọn đời.</p>
+                                </li>
+                                <li>
+                                    <p class="p-right">Quý khách vui lòng giữ lại các phụ kiện, logo và các vật dụng liên quan đến sản phẩm để được bảo dưỡng.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-12 d-none" id="trongkinhContent">
+                    <div class="row bg-secondary-subtle" id="title-baohanh">
+                        <div class="col-md-4 mt-3">
+                            <p class="p-left">Thời gian</p>
+                        </div>
+                        <div class="col-md-8 mt-3">
+                            <p style="font-weight: 600; ">Chi tiết bảo hành</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mt-3 align-center">
+                            <p class="p-left">90 ngày</p>
+                        </div>
+                        <div class="col-md-8 mt-3">
+                            <ul>
+                                <li>
+                                    <p class="p-right">Bảo hành 1 đổi 1: Quý khách được hỗ trợ đổi sản phẩm khác nếu có bất kỳ lỗi sản xuất.</p>
+                                </li>
+                                <li>
+                                    <p class="p-right">Bảo hành tròng kính nếu quý khách không thể thích nghi với kính mới kể từ ngày nhận kính.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mt-3 align-center">
+                            <p class="p-left">06 tháng</p>
+                        </div>
+                        <div class="col-md-8 mt-3">
+                            <ul>
+                                <li>
+                                    <p class="p-right">Bảo hành tròng kính 06 tháng với các lỗi như: bong tróc do lỗi kỹ thuật, rạn nứt tròng kính tách lớp Polarized, bong lớp tráng gương, nổ rộp tròng, bong lớp váng phủ, bể tròng Polycarbonat/ Trivex, và các trường hợp tương tự.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 d-none" id="khacContent">
+                    <div class="row bg-secondary-subtle" id="title-baohanh">
+                        <div class="col-md-4 mt-3">
+                            <p class="p-left">Thời gian</p>
+                        </div>
+                        <div class="col-md-8 mt-3">
+                            <p style="font-weight: 600; ">Chi tiết bảo hành</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mt-3 align-center">
+                            <p class="p-left">Bảo hành/bảo trì nằm ngoài danh mục bảo hành</p>
+                        </div>
+                        <div class="col-md-8 mt-3">
+                            <ul>
+                                <li>
+                                    <p class="p-right">Bảo hành có giá trị tại các cửa hàng EYE-YT trên toàn quốc.</p>
+                                </li>
+                                <li>
+                                    <p class="p-right">Trường hợp những đuôi càng đặc biệt, không có sẵn EYE-YT sẽ tìm mẫu phù hợp hỗ trợ cho khách hàng.</p>
+                                </li>
+                                <li>
+                                    <p class="p-right">Trường hợp các Logo không có sẵn để thay thế EYE-YT sẽ phục chế tương đương.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container khong-km">
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <h1 style="text-align: center;">
+                        Các trường hợp <span style="color: rgb(228, 75, 75);">không được</span> bảo hành
+                    </h1>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h3>1. SỬ DỤNG SAI CÁCH</h3>
+                    <p>Sản phẩm bị thiệt hại, hư hỏng do khách hàng sử dụng sai cách, sơ suất hoặc thiếu sự cẩn trọng khi sử dụng và bảo quản kính, do tác động ngoại lực trong quá trình sử dụng.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>2. HÀNG KHUYẾN MÃI</h3>
+                    <p>Sản phẩm mắt kính được mua trong chương trình ưu đãi giảm giá, sẽ được EYE-YT hỗ trợ bảo trì, bảo dưỡng sản phẩm.</p>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <h3>3. KHÔNG BẢO HÀNH NƯỚC XI, NƯỚC SƠN</h3>
+                    <p>EYE-YT không hỗ trợ bảo hành nước xi, nước sơn cho sản phẩm mắt kính.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>4. LÀM MẤT PHỤ KIỆN</h3>
+                    <p>Đối với trường hợp khách hàng làm mất, thiếu các phụ kiện: logo, càng, ốc vít đặc biệt của sản phẩm EYE-YT chỉ hỗ trợ miễn phí phục chế tương đối.</p>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <h3>5. THIỆT HẠI DO TAI NẠN</h3>
+                    <p>Trong các trường hợp sản phẩm bị thiệt hại, hư hỏng do tai nạn hoặc thảm họa tự nhiên như: hỏa hoạn, động đất…</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>6. THIẾU THÔNG TIN KHI MUA HÀNG</h3>
+                    <p>EYE-YT không hỗ trợ bảo hành sản phẩm, khi khách hàng không cung cấp thông tin mua hàng.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+  <hr>
+
+  <!-- <section class="contact-cta-section container section-spacing text-center">
+    <h2 class="section-title">Khám phá thế giới kính mắt HIHA</h2>
+    <p class="lead mb-4">Hãy ghé thăm cửa hàng của chúng tôi để trải nghiệm trực tiếp sản phẩm và nhận tư vấn chuyên nghiệp từ đội ngũ HIHA.</p>
+    <a href="#" class="btn btn-primary btn-lg me-3">Tìm cửa hàng gần nhất</a>
+    <a href="#lienhe" class="btn btn-outline-primary btn-lg">Liên hệ ngay</a>
+  </section> -->
+
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Đăng ký nhận khuyến mãi</h2>
+        <p>Nhập email của bạn để nhận thông tin về các ưu đãi độc quyền và sản phẩm mới nhất</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Nhập email của bạn" required>
+          <button type="submit">
+            <i class="fa-solid fa-envelope"></i>
+            Đăng ký
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer" id="lienhe">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <a href="../HTML/home.html">
+                <div class="logos">
+                  <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
+                </div>
+              </a>
+              <span>HIHA</span>
+            </div>
+            <p>Chuyên cung cấp kính mắt thời trang chất lượng cao với giá cả hợp lý.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/chirihin04_?igsh=d3ZsZDAxNzlldjRx"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@nhinchiruachoi?_t=ZS-8xosX96W6h6&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h5>Liên kết nhanh</h5>
+            <ul>
+                <li><a href="../HTML/home.html">Trang chủ</a></li>
+                <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="../HTML/blog.html">Blog</a></li>
+                <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h5>Chính sách</h5>
+            <ul>
+              <li><a href="#chinhsachbaohanh">Chính sách bảo hành</a></li>
+              <li><a href="../HTML/chinhsachdoitra.html">Chính sách đổi trả</a></li>
+              <li><a href="../HTML/chinhsachvanchuyen.html">Chính sách vận chuyển</a></li>
+              <li><a href="../HTML/chinhsachbaomat.html">Chính sách bảo mật</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-section">
+            <h5>Thông tin liên hệ</h5>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Số 12 Nguyễn Văn Bảo, phường Hạnh Thông Tây, TP.HCM</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>0123 456 789</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="https://mail.google.com/" style="color: white; text-decoration: none;">info@hiha.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 HIHA. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <div
+    class="modal fade"
+    id="modalId"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    role="dialog"
+    aria-labelledby="modalTitleId"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+      role="document"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Chức năng này đang được phát triển</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Xin lỗi quý khách, tính năng này hiện chưa khả dụng. Vui lòng quay lại sau!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+    <script src="../JS/chuyenheader.js"></script>
+</body>
+</html>

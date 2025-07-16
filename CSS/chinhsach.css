@@ -3,16 +3,28 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 60px 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .policy-section {
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 300;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  padding: 40px 20px;
+}
+
+.policy-section h3,
+.policy-section h4 {
+  font-weight: 500;
+  color: #011e60;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.policy-section hr {
+  margin: 15px auto;
+  width: 60%;
 }
 
 .policy-section:hover {

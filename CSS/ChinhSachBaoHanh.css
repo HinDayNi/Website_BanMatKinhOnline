@@ -1,0 +1,103 @@
+/* Tiêu đề chính trong main */
+main h2, main h3, main h4 {
+    color: #011e60;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Nút trong danh mục chính sách */
+main .btn-light {
+    transition: all 0.3s ease;
+    padding: 15px 30px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+main .btn-light:hover {
+    background-color: #CCCCCC;
+    color: #000000;
+}
+
+main .btn-light.active {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* Nhóm nút */
+main .btn-group ul {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+/* Bảng chính sách bảo hành */
+main #table-baohanh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dòng tiêu đề bảng */
+main #title-baohanh {
+    border-radius: 40px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    font-weight: 500;
+}
+
+/* Căn lề trái phải trong bảng */
+main .p-left {
+    text-align: center;
+    font-weight: 600;
+}
+
+main .p-right {
+    text-align: justify;
+    font-weight: 300;
+}
+
+/* Căn giữa nội dung theo chiều dọc */
+main .align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Phần các trường hợp không bảo hành */
+main .khong-km h1 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+main .khong-km h3 {
+    color: #011e60;
+    font-weight: 500;
+}
+
+main .khong-km p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Responsive: mobile */
+@media screen and (max-width: 768px) {
+    main .btn-group ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main .btn-light {
+        width: 100%;
+        max-width: 100%;
+    }
+}

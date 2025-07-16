@@ -10,10 +10,10 @@
   <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
   <script src="../LIB/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../CSS/index.css">
-  <link rel="stylesheet" href="../CSS/sanpham.css">
+  <link rel="stylesheet" href="../CSS/product-detail.css">
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" id="sliderContainer">
     <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
     <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
 
@@ -23,7 +23,7 @@
     <div class="dot"></div>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand me-4" href="home.html">
+      <a class="navbar-brand me-4" href="../HTML/home.html">
         <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
       </a>
       <button
@@ -40,10 +40,10 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav me-auto mt-2 mt-lg-0">
           <li class="nav-item me-4">
-            <a class="nav-link" href="home.html" aria-current="page">Trang chủ</a>
+            <a class="nav-link" href="../HTML/home.html" aria-current="page">Trang chủ</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link active" href="gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
+            <a class="nav-link active" href="../HTML/gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
           </li>
           <li class="nav-item dropdown me-4">
             <a
@@ -56,17 +56,17 @@
               >Sản phẩm</a
             >
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">Kính râm</a>
-              <a class="dropdown-item" href="#">Kính cận</a>
-              <a class="dropdown-item" href="#">Kính trẻ em</a>
-              <a class="dropdown-item" href="#">Kính chống ánh sáng xanh</a>
+              <a class="dropdown-item" href="../HTML/sanpham.html">Kính râm</a>
+              <a class="dropdown-item" href="../HTML/sanpham.html">Kính cận</a>
+              <a class="dropdown-item" href="../HTML/sanpham.html">Kính trẻ em</a>
+              <a class="dropdown-item" href="../HTML/sanpham.html">Kính chống ánh sáng xanh</a>
             </div>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link" href="../HTML/blog.html">Blog</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="lienhe.html">Liên hệ</a>
+            <a class="nav-link" href="../HTML/lienhe.html">Liên hệ</a>
           </li>
         </ul>
         <div class="d-flex align-items-center gap-3">
@@ -104,53 +104,72 @@
 
 <!-- Chi tiết sản phẩm -->
   <div class="container my-5">
-    <div class="row product-detail">
-      <div class="col-md-6">
-        <img src="../IMG/CacLoaiKinh/l10.jpg" class="img-fluid rounded shadow-sm" alt="Gọng kính kim loại" />
-      </div>
-      <div class="col-md-6">
-        <h2 class="fw-bold">Gọng kính kim loại</h2>
-        <p class="text-muted">Mã SP: HIHA2807</p>
-        <p><strong>Xuất xứ:</strong> Việt Nam</p>
-        <p><strong>Tình trạng:</strong> <span class="text-success">Còn hàng</span></p>
+        <div class="product-content">
+            <div class="box-product">
+                <img src="../IMG/CacLoaiKinh/l10.jpg" class="img-fluid product-img" style="width:  500px;"
+                    alt="Gọng kính kim loại">
 
-        <div class="price mb-3">
-          <span class="fs-3 fw-bold text-danger">684.000₫</span>
-          <span class="text-muted text-decoration-line-through ms-2">880.000₫</span>
-          <span class="badge bg-warning text-dark ms-2">-20%</span>
+                <div class="description">
+                    <h2>Mô tả sản phẩm</h2>
+                    <p>Về thương hiệu kính</p>
+                    <h3>Thông tin chi tiết</h3>
+                    <ul>
+                        <li>Hình dạng gọng:</li>
+                        <li>Chất liệu gọng:</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product-details">
+                <div class="product-box-top">
+                    <div class="product-title-top">
+                        <p>HIHA</p>
+                        <h1>Gọng kính kim loại</h1>
+                    </div>
+                    <div class="product-text">
+                        <span>Tình trạng: <strong>Còn hàng</strong></span>
+                        <span>Mã Sản Phẩm: HIHA2807</span>
+                        <span>Xuất xứ: Việt Nam</span>
+                    </div>
+                    <div class="price">
+                        <span class="current">684.000₫</span>
+                        <span class="old">880.000₫</span>
+                        <span class="discount">-20%</span>
+                        <span class="sold">307 đã bán</span>
+                    </div>
+                    <div class="selectors">
+                        <label>Màu sắc</label>
+                        <select>...</select>
+                        <label>Kích thước</label>
+                        <select>...</select>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn buy-now">Mua ngay</button>
+                    <button class="btn add-cart"
+                        onclick="addToCart('Gọng kính kim loại', 684000 , '../IMG/CacLoaiKinh/l10.jpg')">Thêm vào giỏ
+                        hàng</button>
+                </div>
+
+                <div class="promotions">
+                    <h4><i class="fa-solid fa-gift"></i>Khuyến mãi</h4>
+                    <ul>
+                        <li>Nhập mã <strong>WELCOME200</strong> giảm ngay 200k...</li>
+                        <li>Nhập mã <strong>GIAM10%DMGG</strong> giảm thêm 10%...</li>
+                    </ul>
+                </div>
+
+                <ul class="benefits list-unstyled">
+                    <li><i class="fas fa-box-open text-primary"></i>Được mở hộp kiểm tra khi nhận hàng</li>
+                    <li><i class="fas fa-exchange-alt text-warning"></i>Đổi/Trả trong 07 ngày</li>
+                    <li><i class="fas fa-globe-asia text-success"></i>Giao hàng toàn quốc</li>
+                    <li><i class="fas fa-truck text-info"></i>Nhận hàng 5-7 ngày</li>
+                    <li><i class="fas fa-shipping-fast text-danger"></i>Miễn phí giao hàng ≥ 300k</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="selectors mb-3">
-          <label class="form-label">Màu sắc</label>
-          <select class="form-select mb-2"><option>Chọn màu</option></select>
-
-          <label class="form-label">Kích thước</label>
-          <select class="form-select"><option>Chọn kích thước</option></select>
-        </div>
-
-        <div class="button-group d-flex gap-3 mb-4">
-          <button class="btn btn-danger btn-lg">Mua ngay</button>
-          <button class="btn btn-outline-secondary btn-lg">Thêm vào giỏ hàng</button>
-        </div>
-
-        <div class="promotions mb-4">
-          <h5><i class="fa-solid fa-gift text-pink"></i> Ưu đãi</h5>
-          <ul>
-            <li>Giảm 200k với mã <strong>WELCOME200</strong></li>
-            <li>Giảm thêm 10% với mã <strong>GIAM10%DMGG</strong></li>
-          </ul>
-        </div>
-
-        <ul class="benefits list-unstyled">
-          <li><i class="fas fa-box-open text-primary"></i> Kiểm tra hàng khi nhận</li>
-          <li><i class="fas fa-exchange-alt text-warning"></i> Đổi trả trong 07 ngày</li>
-          <li><i class="fas fa-shipping-fast text-success"></i> Giao hàng toàn quốc, miễn phí với đơn ≥ 300k</li>
-        </ul>
-      </div>
     </div>
-  </div>
-
-  <section class="newsletter-section">
+  <!-- <section class="newsletter-section">
     <div class="container">
       <div class="newsletter-content">
         <h2>Đăng ký nhận khuyến mãi</h2>
@@ -164,7 +183,7 @@
         </form>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <footer class="main-footer">
     <div class="container">
@@ -172,7 +191,7 @@
         <div class="col-md-3">
           <div class="footer-section">
             <div class="footer-logo">
-              <a href="home.html">
+              <a href="../HTML/home.html">
                 <div class="logos">
                   <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
                 </div>
@@ -191,11 +210,11 @@
           <div class="footer-section">
             <h5>Liên kết nhanh</h5>
             <ul>
-                <li><a href="home.html">Trang chủ</a></li>
-                <li><a href="#gioithieu">Giới thiệu</a></li>
+                <li><a href="../HTML/home.html">Trang chủ</a></li>
+                <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Sản phẩm</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="../HTML/blog.html">Blog</a></li>
+                <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
             </ul>
           </div>
         </div>
@@ -203,10 +222,10 @@
           <div class="footer-section">
             <h5>Chính sách</h5>
             <ul>
-              <li><a href="chinhsach.html">Chính sách bảo hành</a></li>
-              <li><a href="chinhsach.html">Chính sách đổi trả</a></li>
-              <li><a href="chinhsach.html">Chính sách vận chuyển</a></li>
-              <li><a href="chinhsach.html">Chính sách bảo mật</a></li>
+              <li><a href="../HTML/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+              <li><a href="../HTML/chinhsachdoitra.html">Chính sách đổi trả</a></li>
+              <li><a href="../HTML/chinhsachvanchuyen.html">Chính sách vận chuyển</a></li>
+              <li><a href="../HTML/chinhsachbaomat.html">Chính sách bảo mật</a></li>
             </ul>
           </div>
         </div>
@@ -264,6 +283,7 @@
       </div>
     </div>
   </div> -->
-
+    <script src="../JS/chuyenheader.js"></script>
+    <script src="../JS/product.js"></script>
 </body>
 </html>

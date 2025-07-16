@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../CSS/chinhsach.css">
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" id="sliderContainer">
     <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
     <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
 
@@ -25,7 +25,7 @@
     <div class="dot"></div>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand me-4" href="home.html">
+      <a class="navbar-brand me-4" href="../HTML/home.html">
         <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
       </a>
       <button
@@ -42,10 +42,10 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav me-auto mt-2 mt-lg-0">
           <li class="nav-item me-4">
-            <a class="nav-link" href="home.html" aria-current="page">Trang chủ</a>
+            <a class="nav-link" href="../HTML/home.html" aria-current="page">Trang chủ</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link active" href="gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
+            <a class="nav-link active" href="../HTML/gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
           </li>
           <li class="nav-item dropdown me-4">
             <a
@@ -65,10 +65,10 @@
             </div>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link" href="../HTML/blog.html">Blog</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="lienhe.html">Liên hệ</a>
+            <a class="nav-link" href="../HTML/lienhe.html">Liên hệ</a>
           </li>
         </ul>
         <div class="d-flex align-items-center gap-3">
@@ -104,43 +104,77 @@
     </nav>
   </div>
 
-<main class="policy-container">
-    <section class="policy-section" id="chinhsachbaohanh">
-      <h1>Chính sách bảo hành</h1>
-      <p>HIHA cam kết bảo hành sản phẩm trong vòng 6 tháng kể từ ngày mua hàng đối với các lỗi kỹ thuật của nhà sản xuất.</p>
-      <ul>
-        <li>Sản phẩm được bảo hành khi có hóa đơn mua hàng.</li>
-        <li>Không áp dụng bảo hành cho lỗi do người dùng gây ra.</li>
-      </ul>
-    </section>
+<main class="mt-5" id="chinhsachdoitra" style="font-weight: 300; color: #333; font-family: 'Segoe UI', sans-serif;">
+  <div class="container border border-4 border-light shadow">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="mt-5 text-center" style="color: #011e60;"><b>Điều kiện đổi trả</b></h3>
+        <p class="text-center">
+          Nếu quý khách không hoàn toàn hài lòng với sự lựa chọn của mình,<br>
+          HIHA hỗ trợ dịch vụ đổi sản phẩm theo những quy định sau đây.
+        </p>
+      </div>
+    </div>
 
-    <section class="policy-section" id="chinhsachdoitra">
-      <h1>Chính sách đổi trả</h1>
-      <p>Bạn có thể đổi trả sản phẩm trong vòng 7 ngày nếu đáp ứng điều kiện:</p>
-      <ul>
-        <li>Sản phẩm chưa qua sử dụng và còn nguyên tem mác.</li>
-        <li>Đổi trả miễn phí tại cửa hàng, phí vận chuyển do khách hàng chịu nếu gửi qua bưu điện.</li>
-      </ul>
-    </section>
+    <div class="container" style="max-width: 900px;">
+      <!-- 1. Đổi trực tiếp tại cửa hàng -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h4 class="title text-center">Đổi trực tiếp tại cửa hàng HIHA</h4>
+          <hr>
+          <p>
+            Trong vòng <strong>7 ngày</strong> kể từ lúc mua sản phẩm, quý khách có thể mang sản phẩm tới trực tiếp cửa hàng để được nhân viên hỗ trợ đổi kính phù hợp hơn.
+          </p>
+        </div>
+      </div>
 
-    <section class="policy-section" id="chinhsachvanchuyen">
-      <h1>Chính sách vận chuyển</h1>
-      <p>HIHA giao hàng toàn quốc với chính sách vận chuyển rõ ràng:</p>
-      <ul>
-        <li>Miễn phí vận chuyển với đơn hàng từ 500.000đ trở lên.</li>
-        <li>Thời gian giao hàng: 2-5 ngày làm việc tùy khu vực.</li>
-      </ul>
-    </section>
+      <!-- 2. Sản phẩm còn nguyên tem -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h4 class="title text-center">Sản phẩm còn nguyên tem</h4>
+          <hr>
+          <p>
+            HIHA hỗ trợ đổi hàng khi sản phẩm còn nguyên tem, mã sản phẩm, phụ kiện và hóa đơn mua hàng. Không áp dụng đổi trả với sản phẩm giảm giá hoặc nằm trong chương trình khuyến mãi.
+          </p>
+        </div>
+      </div>
 
-    <section class="policy-section" id="chinhsachbaomat">
-      <h1>Chính sách bảo mật</h1>
-      <p>HIHA cam kết bảo mật thông tin cá nhân của khách hàng:</p>
-      <ul>
-        <li>Không chia sẻ thông tin cho bên thứ ba khi chưa có sự đồng ý.</li>
-        <li>Thông tin chỉ được sử dụng để xử lý đơn hàng và chăm sóc khách hàng.</li>
-      </ul>
-    </section>
-  </main>
+      <!-- 3. Sản phẩm không bị dơ bẩn -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h4 class="title text-center">Sản phẩm không bị dơ bẩn</h4>
+          <hr>
+          <p>
+            Sản phẩm chỉ được đổi khi không bị dơ bẩn, hư hỏng, trầy xước, không có mùi và chưa qua sử dụng.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. Thanh toán chênh lệch -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h4 class="title text-center">Thanh toán phần chênh lệch</h4>
+          <hr>
+          <p>
+            Nếu sản phẩm cần đổi có giá cao hơn, quý khách vui lòng thanh toán phần chênh lệch. Nếu sản phẩm mới có giá thấp hơn, HIHA xin phép không hoàn lại phần chênh lệch đó.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5. Bảo hành toàn hệ thống -->
+      <div class="row mt-5 mb-5">
+        <div class="col-md-12">
+          <h4 class="title text-center">Bảo hành trên toàn hệ thống HIHA</h4>
+          <hr>
+          <p>
+            Sản phẩm được bảo hành tại toàn bộ cửa hàng HIHA trên toàn quốc. Tham khảo hệ thống cửa hàng <a href="../HTML/lienhe.html">tại đây</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
 
   <hr>
 
@@ -148,7 +182,7 @@
     <h2 class="section-title">Khám phá thế giới kính mắt HIHA</h2>
     <p class="lead mb-4">Hãy ghé thăm cửa hàng của chúng tôi để trải nghiệm trực tiếp sản phẩm và nhận tư vấn chuyên nghiệp từ đội ngũ HIHA.</p>
     <a href="#" class="btn btn-primary btn-lg me-3">Tìm cửa hàng gần nhất</a>
-    <a href="#lienhe" class="btn btn-outline-primary btn-lg">Liên hệ ngay</a>
+    <a href="../HTML/lienhe.html" class="btn btn-outline-primary btn-lg">Liên hệ ngay</a>
   </section>
 
   <section class="newsletter-section">
@@ -173,7 +207,7 @@
         <div class="col-md-3">
           <div class="footer-section">
             <div class="footer-logo">
-              <a href="home.html">
+              <a href="../HTML/home.html">
                 <div class="logos">
                   <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
                 </div>
@@ -192,11 +226,11 @@
           <div class="footer-section">
             <h5>Liên kết nhanh</h5>
             <ul>
-                <li><a href="home.html">Trang chủ</a></li>
-                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="../HTML/home.html">Trang chủ</a></li>
+                <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Sản phẩm</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#lienhe">Liên hệ</a></li>
+                <li><a href="../HTML/blog.html">Blog</a></li>
+                <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
             </ul>
           </div>
         </div>
@@ -204,10 +238,10 @@
           <div class="footer-section">
             <h5>Chính sách</h5>
             <ul>
-              <li><a href="#chinhsachbaohanh">Chính sách bảo hành</a></li>
+              <li><a href="../HTML/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
               <li><a href="#chinhsachdoitra">Chính sách đổi trả</a></li>
-              <li><a href="#chinhsachvanchuyen">Chính sách vận chuyển</a></li>
-              <li><a href="#chinhsachbaomat">Chính sách bảo mật</a></li>
+              <li><a href="../HTML/chinhsachvanchuyen.html">Chính sách vận chuyển</a></li>
+              <li><a href="../HTML/chinhsachbaomat.html">Chính sách bảo mật</a></li>
             </ul>
           </div>
         </div>
@@ -265,6 +299,6 @@
       </div>
     </div>
   </div> -->
-
+    <script src="../JS/chuyenheader.js"></script>
 </body>
 </html>
