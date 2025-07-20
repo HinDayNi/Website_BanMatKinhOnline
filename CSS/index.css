@@ -17,8 +17,40 @@
     background-repeat: no-repeat;
 }
 
+#sliderContainer {
+    position: relative;
+    height: 800px;
+}
+
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Ẩn mặc định */
+}
+
+/* Chỉ hiển thị image map trên slide salehe.png */
+.show-map .slide-image {
+    display: block;
+}
 
 /* === SLIDER CONTROLS === */
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: -1;
+}
+
 .slider-btn {
     position: absolute;
     top: 50%;

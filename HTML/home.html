@@ -23,6 +23,13 @@
         <div class="dot"></div>
         <div class="dot"></div>
     </div>
+    
+    <!-- Image với map -->
+    <img src="" alt="" class="slide-image" id="slideImage" usemap="#shopnowMap">
+    <map name="shopnowMap" id="shopnowMap">
+        <area shape="rect" coords="300,300,500,350" href="sanpham.html" alt="Shop Now" title="Shop Now">
+    </map>
+
     <nav class="navbar navbar-expand-md navbar-dark">
       <a class="navbar-brand me-4" href="#">
         <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
@@ -170,7 +177,7 @@
             <div class="slider-container position-relative">
                 <div class="section-header">
                     <h2 class="section-title">Bán chạy nhất</h2>
-                    <a href="#" class="view-all-btn">
+                    <a href="../HTML/sanpham.html" class="view-all-btn">
                         Xem tất cả sản phẩm
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -304,7 +311,7 @@
                             <div class="collection-overlay">
                                 <h3>Bộ sưu tập Nam</h3>
                                 <p>Phong cách mạnh mẽ và lịch lãm</p>
-                                <a href="#" class="collection-btn">Khám phá</a>
+                                <a href="../HTML/sanpham.html" class="collection-btn">Khám phá</a>
                             </div>
                         </div>
                     </div>
@@ -314,7 +321,7 @@
                             <div class="collection-overlay">
                                 <h3>Bộ sưu tập Nữ</h3>
                                 <p>Thanh lịch và quyến rũ</p>
-                                <a href="#" class="collection-btn">Khám phá</a>
+                                <a href="../HTML/sanpham.html" class="collection-btn">Khám phá</a>
                             </div>
                         </div>
                     </div>
@@ -322,143 +329,151 @@
             </div>
         </section>
 
-        <!-- New Collections -->
-        <section class="container">
-            <div class="bosuutapmoinhat">
-                <div class="bosuutapmoinhat-nav">
-                    <h2 class="section-title">Bộ sưu tập mới nhất</h2>
-                </div>
-                <div class="bosuutapmoinhat-controls">
-                    <button class="bosuutap-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="bosuutap-btn next"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-                <div class="bosuutapmoinhat-content">
-                    <div id="mau1" class="collection active">
-                        <div class="row g-4">
-                            <!-- Product grid for collection 1 -->
-                            <div class="col-6 col-md-3">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
-                                        <div class="product-overlay">
-                                            <a href="../HTML/chitietsanpham.html" class="quick-view-btn">Xem chi tiết</a>
-                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h5 class="product-name">Gọng kính kim loại</h5>
-                                        <div class="product-price">450.000đ</div>
-                                    </div>
+<!-- New Collections -->
+<section class="container">
+    <div class="bosuutapmoinhat">
+        <div class="bosuutapmoinhat-nav">
+            <h2 class="section-title">Bộ sưu tập mới nhất</h2>
+        </div>
+        <div class="bosuutapmoinhat-controls">
+            <button class="bosuutap-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="bosuutap-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="bosuutapmoinhat-content">
+            <!-- Bộ sưu tập 1 - Kính thời trang -->
+            <div id="mau1" class="collection active">
+                <div class="row g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l10.jpg" alt="Kính thời trang">
+                                <div class="product-overlay">
+                                    <a href="../HTML/chitietsanpham.html" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                 </div>
                             </div>
-                            <div class="col-6 col-md-3">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
-                                        <div class="product-overlay">
-                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
-                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h5 class="product-name">Kính cận thời trang</h5>
-                                        <div class="product-price">520.000đ</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
-                                        <div class="product-overlay">
-                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
-                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h5 class="product-name">Kính râm cao cấp</h5>
-                                        <div class="product-price">680.000đ</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
-                                        <div class="product-overlay">
-                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
-                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h5 class="product-name">Gọng kính titanium</h5>
-                                        <div class="product-price">890.000đ</div>
-                                    </div>
-                                </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Kính kính kim loại</h5>
+                                <div class="product-price">450.000đ</div>
                             </div>
                         </div>
                     </div>
-                    <!-- Other collections -->
-                    <div id="mau2" class="collection">
-                        <div class="row g-4">
-                            <div class="col-6 col-md-3">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
-                                        <div class="product-overlay">
-                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
-                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h5 class="product-name">Kính vintage</h5>
-                                        <div class="product-price">420.000đ</div>
-                                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l26.jpg" alt="Kính thời trang">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                 </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Kính tròn sang trọng</h5>
+                                <div class="product-price">520.000đ</div>
                             </div>
                         </div>
                     </div>
-                    <div id="mau3" class="collection">
-                        <div class="row g-4">
-                            <div class="col-6 col-md-3">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
-                                        <div class="product-overlay">
-                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
-                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h5 class="product-name">Kính sport</h5>
-                                        <div class="product-price">380.000đ</div>
-                                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l3.jpg" alt="Kính thời trang">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                 </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Kính râm chống UV cao cấp</h5>
+                                <div class="product-price">680.000đ</div>
                             </div>
                         </div>
                     </div>
-                    <div id="mau4" class="collection">
-                        <div class="row g-4">
-                            <div class="col-6 col-md-3">
-                                <div class="product-card">
-                                    <div class="product-image">
-                                        <img src="../IMG/CacLoaiKinh/l1.jpg" alt="Product">
-                                        <div class="product-overlay">
-                                            <a href="#" class="quick-view-btn">Xem chi tiết</a>
-                                            <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h5 class="product-name">Kính trẻ em</h5>
-                                        <div class="product-price">320.000đ</div>
-                                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l4.jpg" alt="Kính thời trang">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
                                 </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Gọng kính titanium siêu nhẹ</h5>
+                                <div class="product-price">890.000đ</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            
+            <!-- Bộ sưu tập 2 - Kính vintage -->
+            <div id="mau2" class="collection">
+                <div class="row g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l5.jpg" alt="Kính vintage">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Kính gọng nhựa cổ điển</h5>
+                                <div class="product-price">420.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l6.jpg" alt="Kính vintage">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Kính phong cách retro</h5>
+                                <div class="product-price">480.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l21.jpg" alt="Kính vintage">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Kính gọng kim loại bản to</h5>
+                                <div class="product-price">550.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../IMG/CacLoaiKinh/l20.jpg" alt="Kính vintage">
+                                <div class="product-overlay">
+                                    <a href="#" class="quick-view-btn">Xem chi tiết</a>
+                                    <a href="#" class="add-to-cart-btn">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-name">Kính tròn gọng đồng cổ</h5>
+                                <div class="product-price">600.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Customer Testimonials -->
         <section class="testimonials-section">
@@ -571,7 +586,7 @@
                             <ul>
                                 <li><a href="#home">Trang chủ</a></li>
                                 <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
-                                <li><a href="#">Sản phẩm</a></li>
+                                <li><a href="../HTML/sanpham.html">Sản phẩm</a></li>
                                 <li><a href="../HTML/blog.html">Blog</a></li>
                                 <li><a href="../HTML/lienhe.html">Liên hệ</a></li>
                             </ul>
@@ -626,7 +641,8 @@
                     </div>
                     <div class="col-md-6 p-4 bg-white">
                         <div class="modal-header border-0 pb-0">
-                            <h5 class="modal-title w-100 text-center" id="registerModalLabel">Đăng ký tài khoản HIHA</h5>
+                            <h5 class="modal-title w-100 text-center" id="registerModalLabel">Đăng ký tài khoản HIHA
+                            </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
                         </div>
                         <div class="modal-body">
@@ -638,13 +654,13 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email"
-                                        placeholder="example@gmail.com" required>
+                                    <input type="email" class="form-control" id="email" placeholder="example@gmail.com"
+                                        required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Mật khẩu</label>
-                                    <input type="password" class="form-control" id="password"
-                                        placeholder="Tạo mật khẩu" required>
+                                    <input type="password" class="form-control" id="password" placeholder="Tạo mật khẩu"
+                                        required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
@@ -660,9 +676,10 @@
                                 <button type="submit" class="btn btn-pink w-100">Đăng ký</button>
                                 <p class="text-center text-muted mt-3">Hoặc</p>
                                 <a href="https://www.google.com/?hl=vi" class="icon-gg">
-                                    <button type="button" class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2">
-                                    <i class="fa-brands fa-google"></i>
-                                    <span class="ms-2">Đăng nhập bằng Google</span>
+                                    <button type="button"
+                                        class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2">
+                                        <i class="fa-brands fa-google"></i>
+                                        <span class="ms-2">Đăng nhập bằng Google</span>
                                     </button>
                                 </a>
                             </form>
@@ -720,9 +737,10 @@
                                 <button type="submit" class="btn btn-pink w-100">Đăng nhập</button>
                                 <p class="text-center text-muted mt-3">Hoặc</p>
                                 <a href="https://www.google.com/?hl=vi" class="icon-gg">
-                                    <button type="button" class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2">
-                                    <i class="fa-brands fa-google"></i>
-                                    <span class="ms-2">Đăng nhập bằng Google</span>
+                                    <button type="button"
+                                        class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center gap-2">
+                                        <i class="fa-brands fa-google"></i>
+                                        <span class="ms-2">Đăng nhập bằng Google</span>
                                     </button>
                                 </a>
                             </form>
@@ -739,5 +757,7 @@
 
     <script src="../JS/chuyenheader.js"></script>
     <script src="../JS/timkiemsanpham.js"></script>
+    <script src="../JS/login.js"></script>
+    <script src="../JS/chuyencard.js"></script>
 </body>
 </html>
