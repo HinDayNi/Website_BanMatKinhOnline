@@ -1,63 +1,48 @@
+function nhap() {
+    var fullname = document.getElementById("fullname").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    var agree = document.getElementById("agree").checked;
 
-document.addEventListener("DOMContentLoaded", function () {
-    const registerForm = document.querySelector("#modalId form");
-    const loginForm = document.querySelector("#loginModal form");
+    var regexName = /^([A-ZÀ-Ỵ][a-zà-ỹ]+)( [A-ZÀ-Ỵ][a-zà-ỹ]+)+$/;
+    var regexEmail = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    var regexPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
 
-    if (registerForm) {
-        registerForm.addEventListener("submit", function (e) {
-            e.preventDefault();
+    var isValid = true;
 
-            const fullname = document.getElementById("fullname").value;
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value;
-            const confirmPassword = document.getElementById("confirmPassword").value;
+    document.getElementById("errorFullname").innerText = "";
+    document.getElementById("errorEmail").innerText = "";
+    document.getElementById("errorPassword").innerText = "";
+    document.getElementById("errorConfirm").innerText = "";
+    document.getElementById("errorAgree").innerText = "";
 
-            if (password !== confirmPassword) {
-                alert("Mật khẩu xác nhận không khớp!");
-                return;
-            }
-
-            const userData = {
-                fullname,
-                email,
-                password,
-            };
-            localStorage.setItem("registeredUser", JSON.stringify(userData));
-
-            alert("Đăng ký thành công!");
-
-            const modalEl = document.getElementById("modalId");
-            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-            modal.hide();
-        });
+    if (!regexName.test(fullname)) {
+        document.getElementById("errorFullname").innerText = "Họ tên phải có ít nhất 2 từ, viết hoa đầu mỗi từ.";
+        isValid = false;
     }
 
-    if (loginForm) {
-        loginForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const loginEmail = document.getElementById("loginEmail").value.trim();
-            const loginPassword = document.getElementById("loginPassword").value;
-
-            const userData = JSON.parse(localStorage.getItem("registeredUser"));
-
-            if (!userData) {
-                alert("Bạn chưa đăng ký tài khoản nào.");
-                return;
-            }
-
-            if (
-                loginEmail === userData.email &&
-                loginPassword === userData.password
-            ) {
-                alert("Đăng nhập thành công!");
-
-                const modalEl = document.getElementById("loginModal");
-                const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-                modal.hide();
-            } else {
-                alert("Email hoặc mật khẩu không đúng!");
-            }
-        });
+    if (!regexEmail.test(email)) {
+        document.getElementById("errorEmail").innerText = "Email phải đúng định dạng và kết thúc bằng @gmail.com.";
+        isValid = false;
     }
-});
+
+    if (!regexPassword.test(password)) {
+        document.getElementById("errorPassword").innerText = "Mật khẩu phải có chữ, số và ít nhất 6 ký tự.";
+        isValid = false;
+    }
+
+    if (password !== confirmPassword) {
+        document.getElementById("errorConfirm").innerText = "Mật khẩu xác nhận không khớp.";
+        isValid = false;
+    }
+
+    if (!agree) {
+        document.getElementById("errorAgree").innerText = "Bạn phải đồng ý với điều khoản.";
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert("Đăng ký thành công!");
+    }
+}
