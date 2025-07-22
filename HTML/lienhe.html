@@ -1,296 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HIHA - Giới thiệu về chúng tôi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
-  <script src="../LIB/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="../CSS/index.css">
-  <link rel="stylesheet" href="../CSS/gioithieu.css">
-  <link rel="stylesheet" href="../CSS/lienhe.css">
-</head>
-<body>
-  <div class="container-fluid" id="sliderContainer">
-    <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
-    <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
-
-    <div class="slider-dots">
-    <div class="dot active"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    </div>
-    <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand me-4" href="../HTML/home.html">
-        <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
-      </a>
-      <button
-        class="navbar-toggler d-lg-none"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIHA - Giới thiệu về chúng tôi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../IMG/logo/logo-modified.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link href="../LIB/bootstrap.min.css" rel="stylesheet" />
+    <script src="../LIB/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="stylesheet" href="../CSS/gioithieu.css" />
+    <link rel="stylesheet" href="../CSS/lienhe.css" />
+  </head>
+  <body>
+    <div class="container-fluid position-relative" id="sliderContainer">
+      <!-- Navbar overlay -->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-25 top-0"
       >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-          <li class="nav-item me-4">
-            <a class="nav-link" href="../HTML/home.html" aria-current="page">Trang chủ</a>
-          </li>
-          <li class="nav-item me-4">
-            <a class="nav-link active" href="../HTML/gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown me-4">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropdownId"
-              data-bs-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Sản phẩm</a
-            >
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="../HTML/sanpham_kinhram.html">Kính râm</a>
-              <a class="dropdown-item" href="../HTML/sanpham_kinhcan.html">Kính cận</a>
-              <a class="dropdown-item" href="../HTML/sanpham_kinhtreem.html">Kính trẻ em</a>
-              <a class="dropdown-item" href="../HTML/sanpham_kinhchonganhsangxanh.html">Kính chống ánh sáng xanh</a>
+        <a class="navbar-brand me-4" href="../HTML/home.html">
+          <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item me-4">
+              <a class="nav-link" href="../HTML/home.html">Trang chủ</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link active" href="../HTML/gioithieu.html"
+                >Giới thiệu</a
+              >
+            </li>
+            <li class="nav-item dropdown me-4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Sản phẩm</a
+              >
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="../HTML/sanpham_kinhram.html"
+                  >Kính râm</a
+                >
+                <a class="dropdown-item" href="../HTML/sanpham_kinhcan.html"
+                  >Kính cận</a
+                >
+                <a class="dropdown-item" href="../HTML/sanpham_kinhtreem.html"
+                  >Kính trẻ em</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="../HTML/sanpham_kinhchonganhsangxanh.html"
+                  >Kính chống ánh sáng xanh</a
+                >
+              </div>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link" href="../HTML/blog.html">Blog</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link" href="../HTML/lienhe.html">Liên hệ</a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="input-wrapper position-relative">
+              <input
+                type="text"
+                class="form-control ip-search"
+                id="searchInput"
+                placeholder="Tìm kiếm sản phẩm"
+              />
+              <i
+                class="fa-solid fa-magnifying-glass input-icon position-absolute top-50 end-0 translate-middle-y me-3"
+              ></i>
             </div>
-          </li>
-          <li class="nav-item me-4">
-            <a class="nav-link" href="../HTML/blog.html">Blog</a>
-          </li>
-          <li class="nav-item me-4">
-            <a class="nav-link" href="#">Liên hệ</a>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center gap-3">
-          <div class="input-wrapper">
-            <input
-              type="text"
-              class="form-control ip-search"
-              placeholder="Tìm kiếm sản phẩm"
-            />
-            <i class="fa-solid fa-magnifying-glass input-icon"></i>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg cart-icon position-relative"
+              data-bs-toggle="modal"
+              data-bs-target="#miniCartModal"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-count">0</span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg user-icon"
+              data-bs-toggle="modal"
+              data-bs-target="#modalId"
+            >
+              <i class="fa-regular fa-user"></i>
+            </button>
           </div>
-
-          <button
-            type="button"
-            class="btn btn-primary btn-lg cart-icon position-relative"
-            data-bs-toggle="modal"
-            data-bs-target="#modalId"
-          >
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span class="cart-count">0</span>
-          </button>
-
-          <button
-            type="button"
-            class="btn btn-primary btn-lg user-icon"
-            data-bs-toggle="modal"
-            data-bs-target="#modalId"
-          >
-            <i class="fa-regular fa-user"></i>
-          </button>
         </div>
+      </nav>
+      <!-- Bootstrap Carousel -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <!-- Dots -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="../IMG/banner.png"
+              class="d-block w-100"
+              alt="Slide 1"
+              usemap="#shopnowMap"
+            />
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/HIHA.png" class="d-block w-100" alt="Slide 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="../IMG/image.png" class="d-block w-100" alt="Slide 3" />
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
-    </nav>
-  </div>
 
- <!-- Hero -->
-  <section class="about-hero" id="lienhe">
-    <div class="about-hero-content">
-      <h1>Liên hệ HIHA</h1>
-      <p>Chúng tôi sẵn sàng hỗ trợ bạn mọi lúc – hãy ghé qua hệ thống cửa hàng hoặc liên hệ trực tiếp!</p>
+      <!-- Image Map -->
+      <map name="shopnowMap" id="shopnowMap">
+        <area
+          shape="rect"
+          coords="890,550,1100,590"
+          href="../HTML/sanpham.html"
+          alt="Shop Now"
+          title="Shop Now"
+        />
+      </map>
     </div>
-  </section>
 
-  <!-- Store List -->
-  <section class="contact-store-section container">
-    <h3>Hệ Thống Cửa Hàng</h3>
-    <p class="text-center">⏰ Giờ làm việc: <strong>09:00 – 21:00</strong> hàng ngày, kể cả Chủ Nhật <br>📞 Tổng đài: <strong>1900 9999 37</strong></p>
-    <div class="table-responsive mt-4">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>STT</th>
-            <th>Quận</th>
-            <th>Địa chỉ</th>
-            <th>Sau sáp nhập</th>
-            <th>Hotline chi nhánh</th>
-            <th>Đỗ ô-tô</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>Tân Bình</td><td><a href="#">155 Nguyễn Thái Bình</a></td><td>Phường Tân Sơn Nhất</td><td>0939.482.668</td><td>Có</td></tr>
-          <tr><td>2</td><td>Quận 11</td><td><a href="#">199 Lê Đại Hành</a></td><td>Phường 11</td><td>0924.826.668</td><td>Có</td></tr>
-          <tr><td>3</td><td>Thủ Đức</td><td><a href="#">1/2 Chương Dương</a></td><td>Phường Thủ Đức</td><td>0931.482.668</td><td>Có</td></tr>
-          <tr><td>4</td><td>Bình Thạnh</td><td><a href="#">107 Xô Viết Nghệ Tĩnh</a></td><td>Phường Gia Định</td><td>0906.482.668</td><td>Có</td></tr>
-          <tr><td>5</td><td>Quận 1</td><td><a href="#">144B Phạm Viết Chánh</a></td><td>Phường Cầu Ông Lãnh</td><td>0901.446.668</td><td>Không</td></tr>
-          <tr><td>6</td><td>Gò Vấp</td><td><a href="#">438 Quang Trung</a></td><td>Phường Gò Vấp</td><td>0917.438.668</td><td>Có</td></tr>
-          <tr><td>7</td><td>Quận 7</td><td><a href="#">328 Nguyễn Thị Thập</a></td><td>Phường Tân Hưng</td><td>039.328.6668</td><td>Có</td></tr>
-          <tr><td>8</td><td>Quận 12</td><td><a href="#">123/1 Nguyễn Ảnh Thủ</a></td><td>Xã Bà Điểm</td><td>0792.123.668</td><td>Có</td></tr>
-          <tr><td>9</td><td>Quận 9</td><td><a href="#">252 Lê Văn Việt</a></td><td>Phường Tăng Nhơn Phú</td><td>0792.526.668</td><td>Có</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section class="about-hero" id="lienhe">
+      <div class="about-hero-content">
+        <h1>Liên hệ HIHA</h1>
+        <p>
+          Chúng tôi sẵn sàng hỗ trợ bạn mọi lúc – hãy ghé qua hệ thống cửa hàng
+          hoặc liên hệ trực tiếp!
+        </p>
+      </div>
+    </section>
+
+    <!-- Store List -->
+    <section class="contact-store-section container">
+      <h3>Hệ Thống Cửa Hàng</h3>
+      <p class="text-center">
+        ⏰ Giờ làm việc: <strong>09:00 – 21:00</strong> hàng ngày, kể cả Chủ
+        Nhật <br />📞 Tổng đài: <strong>1900 9999 37</strong>
+      </p>
+      <div class="table-responsive mt-4">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Quận</th>
+              <th>Địa chỉ</th>
+              <th>Sau sáp nhập</th>
+              <th>Hotline chi nhánh</th>
+              <th>Đỗ ô-tô</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Tân Bình</td>
+              <td><a href="#">155 Nguyễn Thái Bình</a></td>
+              <td>Phường Tân Sơn Nhất</td>
+              <td>0939.482.668</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Quận 11</td>
+              <td><a href="#">199 Lê Đại Hành</a></td>
+              <td>Phường 11</td>
+              <td>0924.826.668</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Thủ Đức</td>
+              <td><a href="#">1/2 Chương Dương</a></td>
+              <td>Phường Thủ Đức</td>
+              <td>0931.482.668</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Bình Thạnh</td>
+              <td><a href="#">107 Xô Viết Nghệ Tĩnh</a></td>
+              <td>Phường Gia Định</td>
+              <td>0906.482.668</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Quận 1</td>
+              <td><a href="#">144B Phạm Viết Chánh</a></td>
+              <td>Phường Cầu Ông Lãnh</td>
+              <td>0901.446.668</td>
+              <td>Không</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Gò Vấp</td>
+              <td><a href="#">438 Quang Trung</a></td>
+              <td>Phường Gò Vấp</td>
+              <td>0917.438.668</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Quận 7</td>
+              <td><a href="#">328 Nguyễn Thị Thập</a></td>
+              <td>Phường Tân Hưng</td>
+              <td>039.328.6668</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Quận 12</td>
+              <td><a href="#">123/1 Nguyễn Ảnh Thủ</a></td>
+              <td>Xã Bà Điểm</td>
+              <td>0792.123.668</td>
+              <td>Có</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Quận 9</td>
+              <td><a href="#">252 Lê Văn Việt</a></td>
+              <td>Phường Tăng Nhơn Phú</td>
+              <td>0792.526.668</td>
+              <td>Có</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <!-- Google Map -->
-  <section class="contact-map-section" id="ggmap">
-    <h2>Vị trí cửa hàng chính</h2>
-    <div class="contact-map-wrapper">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.0099980305026!2d106.68426511048781!3d10.822158889284868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2sIndustrial%20University%20of%20Ho%20Chi%20Minh%20City!5e1!3m2!1sen!2s!4v1751864623664!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq-section">
-    <h3>Câu hỏi thường gặp</h3>
-    <ul>
-      <li>Sản phẩm có được bảo hành không?</li>
-      <hr>
-      <li>Tôi có thể tới cửa hàng để đo mắt & kiểm tra thị lực không?</li>
-      <hr>
-      <li>Tôi không biết cách chọn kính phù hợp với khuôn mặt của mình?</li>
-      <hr>
-      <li>Tôi có thể đặt hàng Online không?</li>
-      <hr>
-      <li>Tôi có được kiểm tra và thử kính trước khi thanh toán?</li>
-      <hr>
-      <li>Sản phẩm có hỗ trợ đổi trả không?</li>
-    </ul>
-  </section>
-
-  <hr>
-
-  <section class="contact-cta-section container section-spacing text-center">
-    <h2 class="section-title">Khám phá thế giới kính mắt HIHA</h2>
-    <p class="lead mb-4">Hãy ghé thăm cửa hàng của chúng tôi để trải nghiệm trực tiếp sản phẩm và nhận tư vấn chuyên nghiệp từ đội ngũ HIHA.</p>
-    <a href="#" class="btn btn-primary btn-lg me-3">Tìm cửa hàng gần nhất</a>
-    <a href="#lienhe" class="btn btn-outline-primary btn-lg">Liên hệ ngay</a>
-  </section>
-
-  <section class="newsletter-section">
-    <div class="container">
-      <div class="newsletter-content">
-        <h2>Đăng ký nhận khuyến mãi</h2>
-        <p>Nhập email của bạn để nhận thông tin về các ưu đãi độc quyền và sản phẩm mới nhất</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Nhập email của bạn" required>
-          <button type="submit">
-            <i class="fa-solid fa-envelope"></i>
-            Đăng ký
-          </button>
-        </form>
+    <section class="contact-map-section" id="ggmap">
+      <h2>Vị trí cửa hàng chính</h2>
+      <div class="contact-map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.0099980305026!2d106.68426511048781!3d10.822158889284868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2sIndustrial%20University%20of%20Ho%20Chi%20Minh%20City!5e1!3m2!1sen!2s!4v1751864623664!5m2!1sen!2s"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="main-footer" id="lienhe">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-3">
-          <div class="footer-section">
-            <div class="footer-logo">
-              <a href="../HTML/home.html">
-                <div class="logos">
-                  <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo">
-                </div>
-              </a>
-              <span>HIHA</span>
-            </div>
-            <p>Chuyên cung cấp kính mắt thời trang chất lượng cao với giá cả hợp lý.</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/chirihin04_?igsh=d3ZsZDAxNzlldjRx"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@nhinchiruachoi?_t=ZS-8xosX96W6h6&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h3>Câu hỏi thường gặp</h3>
+      <ul>
+        <li>Sản phẩm có được bảo hành không?</li>
+        <hr />
+        <li>Tôi có thể tới cửa hàng để đo mắt & kiểm tra thị lực không?</li>
+        <hr />
+        <li>Tôi không biết cách chọn kính phù hợp với khuôn mặt của mình?</li>
+        <hr />
+        <li>Tôi có thể đặt hàng Online không?</li>
+        <hr />
+        <li>Tôi có được kiểm tra và thử kính trước khi thanh toán?</li>
+        <hr />
+        <li>Sản phẩm có hỗ trợ đổi trả không?</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section class="contact-cta-section container section-spacing text-center">
+      <h2 class="section-title">Khám phá thế giới kính mắt HIHA</h2>
+      <p class="lead mb-4">
+        Hãy ghé thăm cửa hàng của chúng tôi để trải nghiệm trực tiếp sản phẩm và
+        nhận tư vấn chuyên nghiệp từ đội ngũ HIHA.
+      </p>
+      <a href="#" class="btn btn-primary btn-lg me-3">Tìm cửa hàng gần nhất</a>
+      <a href="#lienhe" class="btn btn-outline-primary btn-lg">Liên hệ ngay</a>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Đăng ký nhận khuyến mãi</h2>
+          <p>
+            Nhập email của bạn để nhận thông tin về các ưu đãi độc quyền và sản
+            phẩm mới nhất
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Nhập email của bạn" required />
+            <button type="submit">
+              <i class="fa-solid fa-envelope"></i>
+              Đăng ký
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer" id="lienhe">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="footer-section">
+              <div class="footer-logo">
+                <a href="../HTML/home.html">
+                  <div class="logos">
+                    <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" />
+                  </div>
+                </a>
+                <span>HIHA</span>
+              </div>
+              <p>
+                Chuyên cung cấp kính mắt thời trang chất lượng cao với giá cả
+                hợp lý.
+              </p>
+              <div class="social-links">
+                <a href="https://www.facebook.com/"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/chirihin04_?igsh=d3ZsZDAxNzlldjRx"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.tiktok.com/@nhinchiruachoi?_t=ZS-8xosX96W6h6&_r=1"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h5>Liên kết nhanh</h5>
-            <ul>
+          <div class="col-md-3">
+            <div class="footer-section">
+              <h5>Liên kết nhanh</h5>
+              <ul>
                 <li><a href="../HTML/home.html">Trang chủ</a></li>
                 <li><a href="../HTML/gioithieu.html">Giới thiệu</a></li>
                 <li><a href="../HTML/sanpham.html">Sản phẩm</a></li>
                 <li><a href="../HTML/blog.html">Blog</a></li>
                 <li><a href="#lienhe">Liên hệ</a></li>
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h5>Chính sách</h5>
-            <ul>
-              <li><a href="../HTML/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
-              <li><a href="../HTML/chinhsachdoitra.html">Chính sách đổi trả</a></li>
-              <li><a href="../HTML/chinhsachvanchuyen.html">Chính sách vận chuyển</a></li>
-              <li><a href="../HTML/chinhsachbaomat.html">Chính sách bảo mật</a></li>
-            </ul>
+          <div class="col-md-3">
+            <div class="footer-section">
+              <h5>Chính sách</h5>
+              <ul>
+                <li>
+                  <a href="../HTML/chinhsachbaohanh.html"
+                    >Chính sách bảo hành</a
+                  >
+                </li>
+                <li>
+                  <a href="../HTML/chinhsachdoitra.html">Chính sách đổi trả</a>
+                </li>
+                <li>
+                  <a href="../HTML/chinhsachvanchuyen.html"
+                    >Chính sách vận chuyển</a
+                  >
+                </li>
+                <li>
+                  <a href="../HTML/chinhsachbaomat.html">Chính sách bảo mật</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-section">
-            <h5>Thông tin liên hệ</h5>
-            <div class="contact-info">
-              <div class="contact-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Số 12 Nguyễn Văn Bảo, phường Hạnh Thông Tây, TP.HCM</span>
-              </div>
-              <div class="contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <span>0123 456 789</span>
-              </div>
-              <div class="contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <a href="https://mail.google.com/" style="color: white; text-decoration: none;">info@hiha.com</a>
+          <div class="col-md-3">
+            <div class="footer-section">
+              <h5>Thông tin liên hệ</h5>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span
+                    >Số 12 Nguyễn Văn Bảo, phường Hạnh Thông Tây, TP.HCM</span
+                  >
+                </div>
+                <div class="contact-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>0123 456 789</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <a
+                    href="https://mail.google.com/"
+                    style="color: white; text-decoration: none"
+                    >info@hiha.com</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 HIHA. Tất cả quyền được bảo lưu.</p>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 HIHA. Tất cả quyền được bảo lưu.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- <div
-    class="modal fade"
-    id="modalId"
-    tabindex="-1"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    role="dialog"
-    aria-labelledby="modalTitleId"
-    aria-hidden="true"
-  >
+    <!--MODAL GIỎ HÀNG MINI-->
     <div
-      class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
-      role="document"
+      class="modal fade"
+      id="miniCartModal"
+      tabindex="-1"
+      aria-labelledby="miniCartLabel"
+      aria-hidden="true"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitleId">Chức năng này đang được phát triển</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Xin lỗi quý khách, tính năng này hiện chưa khả dụng. Vui lòng quay lại sau!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="miniCartLabel">Giỏ hàng của bạn</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Đóng"
+            ></button>
+          </div>
+          <div class="modal-body" id="mini-cart-items">
+            <!-- Sản phẩm sẽ được render tại đây -->
+          </div>
+          <div class="modal-footer">
+            <a href="giohang.html" class="btn btn-primary w-100"
+              >Xem giỏ hàng chi tiết</a
+            >
+          </div>
         </div>
       </div>
     </div>
-  </div> -->
-    <script src="../JS/chuyenheader.js"></script>
-</body>
+  </body>
 </html>

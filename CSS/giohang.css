@@ -1,0 +1,136 @@
+.cart-summary {
+    min-height: 360px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 20px;
+}
+
+.cart-items {
+    min-height: 360px;
+    max-height: 650px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cart-items table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-items thead {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+    z-index: 1;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.cart-items th,
+.cart-items td {
+    padding: 12px 10px;
+    vertical-align: middle;
+    font-size: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-items img {
+    width: 60px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.cart-items .btn-sm {
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+#cart-items img {
+    width: 80px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    object-fit: cover;
+}
+
+#cart-items td {
+    vertical-align: middle;
+}
+
+#subtotal-price span:last-child,
+#total-price span:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .cart-items {
+        max-height: unset;
+        border: none;
+        box-shadow: none;
+    }
+
+    .cart-items table thead {
+        display: none;
+    }
+
+    .cart-items table tbody tr {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 1rem;
+        background-color: #fff;
+    }
+
+    .cart-items td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none !important;
+        padding: 0.5rem 0;
+        font-size: 16px;
+    }
+
+    .cart-items img {
+        width: 70px;
+        height: auto;
+        margin-right: 1rem;
+    }
+
+    .cart-summary {
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+        font-size: 16px;
+    }
+
+    .cart-summary h5 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .cart-summary .btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .cart-summary form {
+        font-size: 14px;
+        margin-top: 1rem;
+    }
+
+    #subtotal-price,
+    #total-price {
+        font-size: 16px;
+        justify-content: space-between;
+    }
+}

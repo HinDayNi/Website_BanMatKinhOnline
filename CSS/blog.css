@@ -7,6 +7,7 @@
     text-align: center;
     padding: 100px 0;
     position: relative;
+    margin-top: 100px;
 }
 
 .about-hero::before {
@@ -101,4 +102,14 @@ a.text-decoration-none.text-dark:hover {
 /* Text canh đều */
 .lead, .text {
     text-align: justify;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1055;
+}
+
+.dropdown-menu {
+  z-index: 9999 !important;      
+  position: absolute;  
 }

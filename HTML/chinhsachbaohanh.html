@@ -14,94 +14,84 @@
   <script src="../JS/ChinhSachBaoHanh.js"></script>
 </head>
 <body>
-  <div class="container-fluid" id="sliderContainer">
-    <div class="slider-btn prev"><i class="fas fa-chevron-left"></i></div>
-    <div class="slider-btn next"><i class="fas fa-chevron-right"></i></div>
+<div class="container-fluid position-relative" id="sliderContainer">
+    <!-- Navbar overlay -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-25 top-0">
+    <a class="navbar-brand me-4" href="../HTML/home.html">
+      <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="slider-dots">
-    <div class="dot active"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    </div>
-    <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand me-4" href="../HTML/home.html">
-        <img src="../IMG/logo/logo-modified.png" alt="HIHA Logo" id="logo" />
-      </a>
-      <button
-        class="navbar-toggler d-lg-none"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-          <li class="nav-item me-4">
-            <a class="nav-link" href="../HTML/home.html" aria-current="page">Trang chủ</a>
-          </li>
-          <li class="nav-item me-4">
-            <a class="nav-link active" href="../HTML/gioithieu.html">Giới thiệu <span class="visually-hidden">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown me-4">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropdownId"
-              data-bs-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Sản phẩm</a
-            >
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">Kính râm</a>
-              <a class="dropdown-item" href="#">Kính cận</a>
-              <a class="dropdown-item" href="#">Kính trẻ em</a>
-              <a class="dropdown-item" href="#">Kính chống ánh sáng xanh</a>
-            </div>
-          </li>
-          <li class="nav-item me-4">
-            <a class="nav-link" href="../HTML/blog.html">Blog</a>
-          </li>
-          <li class="nav-item me-4">
-            <a class="nav-link" href="../HTML/lienhe.html">Liên hệ</a>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center gap-3">
-          <div class="input-wrapper">
-            <input
-              type="text"
-              class="form-control ip-search"
-              placeholder="Tìm kiếm sản phẩm"
-            />
-            <i class="fa-solid fa-magnifying-glass input-icon"></i>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item me-4"><a class="nav-link" href="../HTML/home.html">Trang chủ</a></li>
+        <li class="nav-item me-4"><a class="nav-link active" href="../HTML/gioithieu.html">Giới thiệu</a></li>
+        <li class="nav-item dropdown me-4">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sản phẩm</a>
+          <div class="dropdown-menu ">
+            <a class="dropdown-item" href="../HTML/sanpham_kinhram.html">Kính râm</a>
+            <a class="dropdown-item" href="../HTML/sanpham_kinhcan.html">Kính cận</a>
+            <a class="dropdown-item" href="../HTML/sanpham_kinhtreem.html">Kính trẻ em</a>
+            <a class="dropdown-item" href="../HTML/sanpham_kinhchonganhsangxanh.html">Kính chống ánh sáng xanh</a>
           </div>
+        </li>
+        <li class="nav-item me-4"><a class="nav-link" href="../HTML/blog.html">Blog</a></li>
+        <li class="nav-item me-4"><a class="nav-link" href="../HTML/lienhe.html">Liên hệ</a></li>
+      </ul>
 
-          <button
-            type="button"
-            class="btn btn-primary btn-lg cart-icon position-relative"
-            data-bs-toggle="modal"
-            data-bs-target="#modalId"
-          >
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span class="cart-count">0</span>
-          </button>
-
-          <button
-            type="button"
-            class="btn btn-primary btn-lg user-icon"
-            data-bs-toggle="modal"
-            data-bs-target="#modalId"
-          >
-            <i class="fa-regular fa-user"></i>
-          </button>
+      <div class="d-flex align-items-center gap-3">
+        <div class="input-wrapper position-relative">
+          <input type="text" class="form-control ip-search" id="searchInput" placeholder="Tìm kiếm sản phẩm">
+          <i class="fa-solid fa-magnifying-glass input-icon position-absolute top-50 end-0 translate-middle-y me-3"></i>
         </div>
+        <button type="button" class="btn btn-primary btn-lg cart-icon position-relative" data-bs-toggle="modal" data-bs-target="#miniCartModal">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">0</span>
+        </button>
+        <button type="button" class="btn btn-primary btn-lg user-icon" data-bs-toggle="modal" data-bs-target="#modalId">
+          <i class="fa-regular fa-user"></i>
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
+  <!-- Bootstrap Carousel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <!-- Dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../IMG/banner.png" class="d-block w-100" alt="Slide 1" usemap="#shopnowMap">
+      </div>
+      <div class="carousel-item">
+        <img src="../IMG/HIHA.png" class="d-block w-100" alt="Slide 2">
+      </div>
+      <div class="carousel-item">
+        <img src="../IMG/image.png" class="d-block w-100" alt="Slide 3">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
   </div>
+
+  <!-- Image Map -->
+    <map name="shopnowMap" id="shopnowMap">
+        <area shape="rect" coords="890,550,1100,590" href="../HTML/sanpham.html" alt="Shop Now" title="Shop Now">
+    </map>
+</div>
 <main>
         <div class="container">
             <div class="row">
@@ -147,10 +137,10 @@
                                     <p class="p-right">Bảo hành 1 đổi 1: Quý khách được hỗ trợ đổi sản phẩm khác nếu có bất kỳ lỗi sản xuất nào như: rời mối hàn, gãy lò xo, bong lớp sơn.</p>
                                 </li>
                                 <li>
-                                    <p class="p-right">Trường hợp không còn sản phẩm trong kho, EYE-YT sẽ thay thế sản phẩm có giá trị tương đương. Quý khách vui lòng thanh toán phần chênh lệch khi chọn sản phẩm giá trị cao hơn.</p>
+                                    <p class="p-right">Trường hợp không còn sản phẩm trong kho, HIHA sẽ thay thế sản phẩm có giá trị tương đương. Quý khách vui lòng thanh toán phần chênh lệch khi chọn sản phẩm giá trị cao hơn.</p>
                                 </li>
                                 <li>
-                                    <p class="p-right">Trường hợp EYE-YT không thể sửa chữa gọng kính và không còn sản phẩm tương tự trong kho, cửa hàng sẽ thay thế bằng sản phẩm khác đồng giá hoặc tương đương. Quý khách vui lòng thanh toán phần chênh lệch khi chọn sản phẩm giá trị cao hơn.</p>
+                                    <p class="p-right">Trường hợp HIHA không thể sửa chữa gọng kính và không còn sản phẩm tương tự trong kho, cửa hàng sẽ thay thế bằng sản phẩm khác đồng giá hoặc tương đương. Quý khách vui lòng thanh toán phần chênh lệch khi chọn sản phẩm giá trị cao hơn.</p>
                                 </li>
                             </ul>
                         </div>
@@ -243,13 +233,13 @@
                         <div class="col-md-8 mt-3">
                             <ul>
                                 <li>
-                                    <p class="p-right">Bảo hành có giá trị tại các cửa hàng EYE-YT trên toàn quốc.</p>
+                                    <p class="p-right">Bảo hành có giá trị tại các cửa hàng HIHA trên toàn quốc.</p>
                                 </li>
                                 <li>
-                                    <p class="p-right">Trường hợp những đuôi càng đặc biệt, không có sẵn EYE-YT sẽ tìm mẫu phù hợp hỗ trợ cho khách hàng.</p>
+                                    <p class="p-right">Trường hợp những đuôi càng đặc biệt, không có sẵn HIHA sẽ tìm mẫu phù hợp hỗ trợ cho khách hàng.</p>
                                 </li>
                                 <li>
-                                    <p class="p-right">Trường hợp các Logo không có sẵn để thay thế EYE-YT sẽ phục chế tương đương.</p>
+                                    <p class="p-right">Trường hợp các Logo không có sẵn để thay thế HIHA sẽ phục chế tương đương.</p>
                                 </li>
                             </ul>
                         </div>
@@ -274,18 +264,18 @@
                 </div>
                 <div class="col-md-6">
                     <h3>2. HÀNG KHUYẾN MÃI</h3>
-                    <p>Sản phẩm mắt kính được mua trong chương trình ưu đãi giảm giá, sẽ được EYE-YT hỗ trợ bảo trì, bảo dưỡng sản phẩm.</p>
+                    <p>Sản phẩm mắt kính được mua trong chương trình ưu đãi giảm giá, sẽ được HIHA hỗ trợ bảo trì, bảo dưỡng sản phẩm.</p>
                 </div>
             </div>
 
             <div class="row mt-3">
                 <div class="col-md-6">
                     <h3>3. KHÔNG BẢO HÀNH NƯỚC XI, NƯỚC SƠN</h3>
-                    <p>EYE-YT không hỗ trợ bảo hành nước xi, nước sơn cho sản phẩm mắt kính.</p>
+                    <p>HIHA không hỗ trợ bảo hành nước xi, nước sơn cho sản phẩm mắt kính.</p>
                 </div>
                 <div class="col-md-6">
                     <h3>4. LÀM MẤT PHỤ KIỆN</h3>
-                    <p>Đối với trường hợp khách hàng làm mất, thiếu các phụ kiện: logo, càng, ốc vít đặc biệt của sản phẩm EYE-YT chỉ hỗ trợ miễn phí phục chế tương đối.</p>
+                    <p>Đối với trường hợp khách hàng làm mất, thiếu các phụ kiện: logo, càng, ốc vít đặc biệt của sản phẩm HIHA chỉ hỗ trợ miễn phí phục chế tương đối.</p>
                 </div>
             </div>
 
@@ -296,7 +286,7 @@
                 </div>
                 <div class="col-md-6">
                     <h3>6. THIẾU THÔNG TIN KHI MUA HÀNG</h3>
-                    <p>EYE-YT không hỗ trợ bảo hành sản phẩm, khi khách hàng không cung cấp thông tin mua hàng.</p>
+                    <p>HIHA không hỗ trợ bảo hành sản phẩm, khi khách hàng không cung cấp thông tin mua hàng.</p>
                 </div>
             </div>
         </div>
@@ -399,34 +389,22 @@
     </div>
   </footer>
 
-  <!-- <div
-    class="modal fade"
-    id="modalId"
-    tabindex="-1"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    role="dialog"
-    aria-labelledby="modalTitleId"
-    aria-hidden="true"
-  >
-    <div
-      class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
-      role="document"
-    >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitleId">Chức năng này đang được phát triển</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!--MODAL GIỎ HÀNG MINI-->
+    <div class="modal fade" id="miniCartModal" tabindex="-1" aria-labelledby="miniCartLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="miniCartLabel">Giỏ hàng của bạn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body" id="mini-cart-items">
+                    <!-- Sản phẩm sẽ được render tại đây -->
+                </div>
+                <div class="modal-footer">
+                    <a href="giohang.html" class="btn btn-primary w-100">Xem giỏ hàng chi tiết</a>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <p>Xin lỗi quý khách, tính năng này hiện chưa khả dụng. Vui lòng quay lại sau!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-        </div>
-      </div>
     </div>
-  </div> -->
-    <script src="../JS/chuyenheader.js"></script>
 </body>
 </html>
