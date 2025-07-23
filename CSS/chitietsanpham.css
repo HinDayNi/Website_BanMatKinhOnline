@@ -99,7 +99,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 .product-text {
     display: flex;
     gap: 10px;
@@ -118,22 +117,28 @@ body {
     border: none;
     cursor: pointer;
     font-weight: 500;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
 }
-
-.btn.buy-now {
+.button-group a:hover{
+    background-color: #bf3533;
+}
+.button-group a{
+    border-radius: 8px;
     width: 50%;
-    background: #f44336;
+    text-align: center;
+    background-color: #f64643;
+}
+.btn.buy-now{
     color: #fff;
 }
-
 .btn.add-cart {
     width: 50%;
-    background: #ff9800;
+    background-color: #ff9800;
     color: #fff;
 }
-
+.btn.add-cart:hover{
+    background-color: #da8505;
+    color:#fff ;
+}
 .benefits-wrapper {
     max-width: 600px;
     margin: auto;
